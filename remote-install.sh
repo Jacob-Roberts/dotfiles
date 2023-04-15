@@ -1,7 +1,7 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
-SOURCE="https://github.com/webpro/dotfiles"
-TARBALL="$SOURCE/tarball/master"
+SOURCE="https://github.com/Jacob-Roberts/dotfiles"
+TARBALL="$SOURCE/tarball/main"
 TARGET="$HOME/.dotfiles"
 TAR_CMD="tar -xzv -C "$TARGET" --strip-components=1 --exclude='{.gitignore}'"
 

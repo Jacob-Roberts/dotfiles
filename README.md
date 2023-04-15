@@ -7,9 +7,8 @@ It mainly targets macOS systems (should install on e.g. Ubuntu as well for many 
 ## Highlights
 
 - Minimal efforts to install everything, using a [Makefile](./Makefile)
-- Mostly based around Homebrew, Caskroom and Node.js, latest Bash + GNU Utils
-- Great [Window management](./config/hammerspoon/README.md) (using Hammerspoon)
-- Fast and colored prompt
+- Mostly based around Homebrew, Caskroom and Node.js, latest Zsh + GNU Utils
+- Oh my zsh
 - Updated macOS defaults
 - Well-organized and easy to customize
 - The installation and runcom setup is
@@ -23,16 +22,15 @@ It mainly targets macOS systems (should install on e.g. Ubuntu as well for many 
 - [Homebrew](https://brew.sh) (packages: [Brewfile](./install/Brewfile))
 - [homebrew-cask](https://github.com/Homebrew/homebrew-cask) (packages: [Caskfile](./install/Caskfile))
 - [Node.js + npm LTS](https://nodejs.org/en/download/) (packages: [npmfile](./install/npmfile))
-- Latest Git, Bash, Python, GNU coreutils, curl, Ruby
-- [Hammerspoon](https://www.hammerspoon.org) (config: [keybindings & window management](./config/hammerspoon))
-- [Mackup](https://github.com/lra/mackup) (sync application settings)
-- `$EDITOR` is [GNU nano](https://www.nano-editor.org) (`$VISUAL` is `code` and Git `core.editor` is `code --wait`)
+- Latest Git, zsh, Python, GNU coreutils, curl, Ruby
+<!-- - [Mackup](https://github.com/lra/mackup) (sync application settings) -->
+<!-- - `$EDITOR` is [GNU nano](https://www.nano-editor.org) (`$VISUAL` is `code` and Git `core.editor` is `code --wait`) -->
 
 ## Installation
 
 On a sparkling fresh installation of macOS:
 
-```bash
+```zsh
 sudo softwareupdate -i -a
 xcode-select --install
 ```
@@ -41,22 +39,22 @@ The Xcode Command Line Tools includes `git` and `make` (not available on stock m
 
 1. Install this repo with `curl` available:
 
-```bash
-bash -c "`curl -fsSL https://raw.githubusercontent.com/webpro/dotfiles/master/remote-install.sh`"
+```zsh
+zsh -c "`curl -fsSL https://raw.githubusercontent.com/jacob-roberts/dotfiles/main/remote-install.sh`"
 ```
 
 This will clone or download this repo to `~/.dotfiles` (depending on the availability of `git`, `curl` or `wget`).
 
 1. Alternatively, clone manually into the desired location:
 
-```bash
-git clone https://github.com/webpro/dotfiles.git ~/.dotfiles
+```zsh
+git clone https://github.com/jacob-roberts/dotfiles.git ~/.dotfiles
 ```
 
 Use the [Makefile](./Makefile) to install the [packages listed above](#packages-overview), and symlink
 [runcom](./runcom) and [config](./config) files (using [stow](https://www.gnu.org/software/stow/)):
 
-```bash
+```zsh
 cd ~/.dotfiles
 make
 ```
