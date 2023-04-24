@@ -31,7 +31,7 @@ core-linux:
 stow-macos: brew
 	is-executable stow || brew install stow
 
-stow-linux: core-linux
+stow-linux:
 	is-executable stow || apt-get -y install stow
 
 sudo:
@@ -42,7 +42,7 @@ endif
 
 packages: brew-packages cask-apps node-packages
 
-link:
+link: stow-$(OS)
 	for FILE in $$(\ls -A zsh); do if [ -f $(HOME)/$$FILE -a ! -h $(HOME)/$$FILE ]; then \
 		mv -v $(HOME)/$$FILE{,.bak}; fi; done
 	mkdir -p $(XDG_CONFIG_HOME)
