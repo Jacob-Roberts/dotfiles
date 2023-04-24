@@ -55,7 +55,7 @@ unlink: stow-$(OS)
 
 brew:
 	is-executable brew || curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
-	is-executable brew || eval "$$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
+	eval "$$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
 
 bash: brew
 ifdef GITHUB_ACTION
