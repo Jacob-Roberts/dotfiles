@@ -25,8 +25,6 @@ core-macos: brew bash git npm ruby rust
 
 core-linux:
 	apt-get update
-	apt-get upgrade -y
-	apt-get dist-upgrade -f
 
 stow-macos: brew
 	is-executable stow || brew install stow
