@@ -19,9 +19,9 @@ It mainly targets macOS systems (should install on e.g. Ubuntu as well for many 
 
 ## Packages Overview
 
-- [Homebrew](https://brew.sh) (packages: [Brewfile](./install/Brewfile))
-- [homebrew-cask](https://github.com/Homebrew/homebrew-cask) (packages: [Caskfile](./install/Caskfile))
-- [Node.js + npm LTS](https://nodejs.org/en/download/) (packages: [npmfile](./install/npmfile))
+- [Homebrew](https://brew.sh) (packages: [Brewfile](./installManifest/Brewfile))
+- [homebrew-cask](https://github.com/Homebrew/homebrew-cask) (packages: [Caskfile](./installManifest/Caskfile))
+- [Node.js + npm LTS](https://nodejs.org/en/download/) (packages: [npmfile](./installManifest/npmfile))
 - Latest Git, zsh, Python, GNU coreutils, curl, Ruby
 <!-- - [Mackup](https://github.com/lra/mackup) (sync application settings) -->
 <!-- - `$EDITOR` is [GNU nano](https://www.nano-editor.org) (`$VISUAL` is `code` and Git `core.editor` is `code --wait`) -->

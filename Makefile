@@ -80,15 +80,15 @@ npm: brew-packages
 	$(FNM_BIN) install --lts
 
 brew-packages: brew
-	$(BREW_BIN) bundle --file=$(DOTFILES_DIR)/install/Brewfile
+	$(BREW_BIN) bundle --file=$(DOTFILES_DIR)/installManifest/Brewfile
 
 cask-apps: brew
-	$(BREW_BIN) bundle --file=$(DOTFILES_DIR)/install/Caskfile || true
+	$(BREW_BIN) bundle --file=$(DOTFILES_DIR)/installManifest/Caskfile || true
 	defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
-	for EXT in $$(cat install/Codefile); do code --install-extension $$EXT; done
+	for EXT in $$(cat installManifest/Codefile); do code --install-extension $$EXT; done
 	xattr -d -r com.apple.quarantine ~/Library/QuickLook
 
 node-packages: npm
-	eval $$(fnm env); npm install -g $(shell cat install/npmfile)
+	eval $$(fnm env); npm install -g $(shell cat installManifest/npmfile)
 
 
