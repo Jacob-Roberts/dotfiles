@@ -19,7 +19,7 @@ all: $(OS)
 
 macos: sudo core-macos packages link
 
-linux: core-linux link
+linux: link
 
 core-macos: brew bash git npm ruby rust
 
