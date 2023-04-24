@@ -17,9 +17,9 @@ export ACCEPT_EULA=Y
 
 all: $(OS)
 
-macos: sudo core-macos packages link
+macos: sudo core-macos packages cask-apps link
 
-linux: link
+linux: packages link
 
 core-macos: brew bash git npm ruby rust
 
@@ -38,7 +38,7 @@ ifndef GITHUB_ACTION
 	while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 endif
 
-packages: brew-packages cask-apps node-packages
+packages: brew-packages node-packages
 
 link: stow-$(OS)
 	for FILE in $$(\ls -A zsh); do if [ -f $(HOME)/$$FILE -a ! -h $(HOME)/$$FILE ]; then \
