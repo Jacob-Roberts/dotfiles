@@ -15,17 +15,6 @@ export ACCEPT_EULA=Y
 
 .PHONY: test
 
-all: $(OS)
-
-macos: sudo core-macos packages cask-apps link
-
-linux: packages link
-
-core-macos: brew bash git npm ruby rust
-
-core-linux:
-	apt-get update
-
 stow-macos: brew
 	is-executable stow || brew install stow
 
@@ -37,8 +26,6 @@ ifndef GITHUB_ACTION
 	sudo -v
 	while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 endif
-
-packages: brew-packages node-packages
 
 link: stow-$(OS)
 	for FILE in $$(\ls -A zsh); do if [ -f $(HOME)/$$FILE -a ! -h $(HOME)/$$FILE ]; then \
@@ -55,7 +42,9 @@ unlink: stow-$(OS)
 
 brew:
 	is-executable brew || curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
-	eval "$$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
+	echo "$$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
+	shell eval "$$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
+	brew --version
 
 bash: brew
 ifdef GITHUB_ACTION
