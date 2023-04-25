@@ -4,7 +4,3 @@
 
 [color]
 	ui = true
-
-[credential]
-	helper = /usr/local/bin/git-credential-manager
-	credentialStore = cache
