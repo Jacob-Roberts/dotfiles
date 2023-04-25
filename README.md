@@ -35,7 +35,7 @@ sudo softwareupdate -i -a
 xcode-select --install
 ```
 
-The Xcode Command Line Tools includes `git` and `make` (not available on stock macOS). Now there are two options:
+The Xcode Command Line Tools includes `git` (not available on stock macOS). Now there are two options:
 
 1. Install this repo with `curl` available:
 
@@ -51,42 +51,12 @@ This will clone or download this repo to `~/.dotfiles` (depending on the availab
 git clone https://github.com/jacob-roberts/dotfiles.git ~/.dotfiles
 ```
 
-Use the [Makefile](./Makefile) to install the [packages listed above](#packages-overview), and symlink
-[runcom](./runcom) and [config](./config) files (using [stow](https://www.gnu.org/software/stow/)):
+Use the [setup.sh](./setup.sh) to install the [packages listed above](#packages-overview), and symlink
+[zsh](./zsh) and [config](./config) files (using `ln -s`):
 
 ```zsh
 cd ~/.dotfiles
-make
-```
-
-The installation process in the Makefile is tested on every push and every week in this
-[GitHub Action](https://github.com/webpro/dotfiles/actions).
-
-## Post-Installation
-
-- `dot dock` (set [Dock items](./macos/dock.sh))
-- `dot macos` (set [macOS defaults](./macos/defaults.sh))
-- Mackup
-  - Log in to Dropbox (and wait until synced)
-  - `cd && ln -s ~/.config/mackup/.mackup.cfg ~`
-  - `mackup restore`
-- Start `Hammerspoon` once and set "Launch Hammerspoon at login"
-- `touch ~/.dotfiles/system/.exports` and populate this file with tokens (e.g. `export GITHUB_TOKEN=abc`)
-
-## The `dotfiles` command
-
-```
-$ dot help
-Usage: dot <command>
-
-Commands:
-   clean            Clean up caches (brew, cargo, gem, pip)
-   dock             Apply macOS Dock settings
-   edit             Open dotfiles in IDE ($VISUAL) and Git GUI ($VISUAL_GIT)
-   help             This help message
-   macos            Apply macOS system defaults
-   test             Run tests
-   update           Update packages and pkg managers (brew, casks, cargo, pip3, npm, gems, macOS)
+./setup.sh
 ```
 
 ## Customize

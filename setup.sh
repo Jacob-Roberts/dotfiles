@@ -3,6 +3,8 @@
 set -e
 set -u
 
+########## Variables
+
 DOTFILES_DIR=$HOME/dotfiles
 if [ $USER == "codespace" ]; then
   DOTFILES_DIR=/workspaces/.codespaces/.persistedshare/dotfiles
@@ -12,40 +14,36 @@ if [ $(git remote get-url origin) == "https://github.com/Jacob-Roberts/dotfiles"
 fi
 
 PATH=${DOTFILES_DIR}/bin:${PATH}
-OS=$(bin/is-supported bin/is-macos macos linux)
 HOMEBREW_PREFIX=$(bin/is-supported bin/is-macos $(bin/is-supported bin/is-arm64 /opt/homebrew /usr/local) /home/linuxbrew/.linuxbrew)
-SHELLS=/private/etc/shells
-BASH_BIN=${HOMEBREW_PREFIX}/bin/bash
-BREW_BIN=${HOMEBREW_PREFIX}/bin/brew
-CARGO_BIN=${HOMEBREW_PREFIX}/bin/cargo
-FNM_BIN=${HOMEBREW_PREFIX}/bin/fnm
-STOW_BIN=${HOMEBREW_PREFIX}/bin/stow
 export XDG_CONFIG_HOME=${HOME}/.config
-
-########## Variables
-
-files="bashrc vimrc vim zshrc oh-my-zsh private scrotwm.conf Xresources"    # list of files/folders to symlink in homedir
 
 ##########
 
 
 link () {
 # create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
-for file in $(\ls -A zsh); do 
+  for file in $(ls -A zsh); do 
     if [ -f ${HOME}/$file -a ! -h ${HOME}/$file ]; then
       echo "backing up $file"
       mv -v ${HOME}/$file{,.bak};
     fi
     echo "Creating symlink to $file in home directory."
     ln -sf $DOTFILES_DIR/zsh/$file ~/$file
-done
+  done
 
-    echo "Creating ${XDG_CONFIG_HOME} directory"
-    mkdir -p ${XDG_CONFIG_HOME}
-    for folder in $(\ls -A config); do
-      echo "Creating symlink from $DOTFILES_DIR/config/$folder to ${XDG_CONFIG_HOME}/$folder directory"
-      ln -sf $DOTFILES_DIR/config/$folder ${XDG_CONFIG_HOME}/$folder
+  echo "Creating ${XDG_CONFIG_HOME} directory"
+  mkdir -p ${XDG_CONFIG_HOME}
+  for folder in $(ls -A config); do
+      mkdir -p ${XDG_CONFIG_HOME}/$folder
+    for file in $(ls -A config/$folder); do
+      if [ -f ${XDG_CONFIG_HOME}/$folder/$file -a ! -h ${XDG_CONFIG_HOME}/$folder/$file ]; then
+        echo "backing up ${XDG_CONFIG_HOME}/$folder/$file"
+        mv -v ${XDG_CONFIG_HOME}/$folder/$file{,.bak};
+      fi
+      echo "Creating symlink from $DOTFILES_DIR/config/$folder/$file to ${XDG_CONFIG_HOME}/$folder/$file"
+      ln -sf $DOTFILES_DIR/config/$folder/$file $XDG_CONFIG_HOME/$folder/$file
     done
+  done
 }
 
 install_zsh () {
@@ -53,15 +51,15 @@ install_zsh () {
 if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
 
     # Clone my oh-my-zsh repository from GitHub only if it isn't already present
-    # echo "==========================================================="
-    # echo "             cloning oh-my-zsh                  "
-    # echo "-----------------------------------------------------------"   
-    # if [[ ! -d $HOME/dotfiles/oh-my-zsh/ ]]; then
-    #     git clone http://github.com/robbyrussell/oh-my-zsh.git
-    # else 
-    #   echo "========================== done ==========================="
-    # fi
-    # echo ""
+    echo "==========================================================="
+    echo "             cloning oh-my-zsh                  "
+    echo "-----------------------------------------------------------"   
+    if [[ ! -d ${ZSH:-~/.oh-my-zsh} ]]; then
+        git clone http://github.com/robbyrussell/oh-my-zsh.git
+    else 
+      echo "========================== done ==========================="
+    fi
+    echo ""
 
     echo "==========================================================="
     echo "             cloning zsh-autosuggestions                   "
@@ -100,16 +98,38 @@ else
 fi
 }
 
-brew() {
-  is-executable brew || curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
-  eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
-  echo "$(brew --version)"
+brew_install() {
+  if is-executable brew ; then
+    echo "brew is installed"
+  else
+    echo "==========================================================="
+    echo "             installing homebrew                           "
+    echo "-----------------------------------------------------------"   
+    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
+    eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
+    brew --version
+  fi
+}
+
+git () {
+  brew install git
+}
+
+npm () {
+  fnm install --lts
 }
 
 brew_packages () {
-  brew
-  
+  brew_install
+  brew bundle --file=${DOTFILES_DIR}/installManifest/Brewfile
+}
 
+cask_apps () {
+  brew bundle --file=${DOTFILES_DIR}/installManifest/Caskfile
+}
+
+node_packages () {
+  npm install -g $(cat ${DOTFILES_DIR}/installManifest/npmfile)
 }
 
 packages () {
@@ -128,7 +148,7 @@ install_zsh
 
 platform=$(uname);
 if [[ $platform == "Linux" ]]; then
-  # packages
+  packages
   link
 elif [[ $platform == "Darwin" ]]; then
   core_macos
