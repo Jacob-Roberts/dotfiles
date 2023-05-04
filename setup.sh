@@ -20,7 +20,7 @@ export XDG_CONFIG_HOME=${HOME}/.config
 ##########
 
 
-link () {
+symlink () {
 # create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
   for file in $(ls -A zsh); do 
     if [ -f ${HOME}/$file -a ! -h ${HOME}/$file ]; then
@@ -111,11 +111,11 @@ brew_install() {
   fi
 }
 
-git () {
+git_install () {
   brew install git
 }
 
-npm () {
+npm_install () {
   fnm install --lts
 }
 
@@ -139,8 +139,8 @@ packages () {
 
 core_macos () {
   brew
-  git
-  npm
+  git_install
+  npm_install
 }
 
 # Actual install script
@@ -149,12 +149,12 @@ install_zsh
 platform=$(uname);
 if [[ $platform == "Linux" ]]; then
   packages
-  link
+  symlink
 elif [[ $platform == "Darwin" ]]; then
   core_macos
   packages
   cask_apps
-  link
+  symlink
 fi
 
 
