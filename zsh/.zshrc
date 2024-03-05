@@ -103,7 +103,14 @@ source $ZSH/oh-my-zsh.sh
 alias gfp='git fetch --prune'
 alias gpap='git pull && git fetch --prune'
 alias lcs='echo $?'
+if [[ `uname` == Darwin ]]; then
+	alias uuidlower='uuidgen | tr A-F a-f'
+fi
+alias uuidcopy='uuidgen | tr A-F a-f | tr -d '\n' | pbcopy'
+# fast node manager
+alias fnmsetup='eval "$(fnm env --use-on-cd)"'
 
-# fnm
-# export PATH="$HOME/.local/share/fnm:$PATH"
-# eval "`fnm env`"
+function findandkill() {
+    lsof -t -i tcp:$1 | xargs kill -9
+}
+alias killport=findandkill
