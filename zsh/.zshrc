@@ -100,17 +100,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Set PATH, MANPATH, etc., for Homebrew.
-if [[ "$OSTYPE" =~ ^darwin ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-else
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
-
 alias gfp='git fetch --prune'
 alias gpap='git pull && git fetch --prune'
 alias lcs='echo $?'
 
 # fnm
-export PATH="$HOME/.local/share/fnm:$PATH"
-eval "`fnm env`"
+# export PATH="$HOME/.local/share/fnm:$PATH"
+# eval "`fnm env`"
