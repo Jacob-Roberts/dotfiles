@@ -1,8 +1,0 @@
-tap "homebrew/bundle"
-
-brew "jq"
-
-brew "fnm"
-brew "gh"
-
-
