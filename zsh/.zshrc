@@ -87,6 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR="code --wait"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -101,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias gfp='git fetch --prune'
-alias gpap='git pull && git fetch --prune'
+alias gpap='git pull --prune'
 alias lcs='echo $?'
 if [[ `uname` == Darwin ]]; then
 	alias uuidlower='uuidgen | tr A-F a-f'
