@@ -103,6 +103,7 @@ export EDITOR="code --wait"
 
 alias gfp='git fetch --prune'
 alias gpap='git pull --prune'
+alias python='python3'
 alias lcs='echo $?'
 if [[ `uname` == Darwin ]]; then
 	alias uuidlower='uuidgen | tr A-F a-f'
@@ -115,3 +116,28 @@ function findandkill() {
     lsof -t -i tcp:$1 | xargs kill -9
 }
 alias killport=findandkill
+function rebasemaster() {
+    git switch master
+    git pull --prune
+    git switch -
+    git rebase master
+}
+
+if [ -f ~/.monzozshrc ]; then
+    source ~/.monzozshrc
+fi
+
+# eval "$(bw completion --shell zsh); compdef _bw bw;"
+
+# Created by `pipx` on 2024-04-16 16:29:53
+export PATH="$PATH:/Users/jacobroberts/.local/bin"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+# bun completions
+[ -s "/Users/jacobroberts/.bun/_bun" ] && source "/Users/jacobroberts/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
