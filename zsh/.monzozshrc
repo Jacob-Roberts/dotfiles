@@ -2,6 +2,8 @@
 ### MONZO ###
 #############
 
+[ -f $HOME/src/github.com/monzo/starter-pack/zshenv ] && source $HOME/src/github.com/monzo/starter-pack/zshenv
+
 alias listemulators='~/Library/Android/sdk/emulator/emulator -list-avds'
 alias openemulator='~/Library/Android/sdk/emulator/emulator -avd Pixel_8_API_34'
 alias emulator='openemulator'
