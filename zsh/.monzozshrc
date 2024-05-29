@@ -30,3 +30,6 @@ function adblogin() {
 }
 
 eval "$(rbenv init -)"
+
+# Added by Toolbox App
+export PATH="$PATH:/Users/jacobroberts/Library/Application Support/JetBrains/Toolbox/scripts"
