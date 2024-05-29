@@ -1,6 +1,5 @@
 [user]
 	email = $MONZO_EMAIL
-	name = Jacob Roberts
 [url "ssh://git@github.com/monzo/"]
 	insteadOf = https://github.com/monzo/
 [scalar]

@@ -2,14 +2,10 @@
 	name = Jacob Roberts
 	email = jroberts.g1ql8@simplelogin.com
 
-[includeIf "gitdir:~/oss/"]
-    path = .gitconfig-oss
-[includeIf "gitdir:~/personal/"]
-    path = .gitconfig-oss
-[includeIf "gitdir:~/.dotfiles/"]
-    path = .gitconfig-oss
 [includeIf "gitdir:~/src/github.com/monzo"]
     path = .gitconfig-monzo
+[includeIf "gitdir:~/developer/boxworks"]
+    path = .gitconfig-boxworks
 
 [color]
 	ui = true
