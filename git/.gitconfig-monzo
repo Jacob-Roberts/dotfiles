@@ -1,0 +1,14 @@
+[user]
+	email = $MONZO_EMAIL
+	name = Jacob Roberts
+[url "ssh://git@github.com/monzo/"]
+	insteadOf = https://github.com/monzo/
+[scalar]
+	repo = /Users/jacobroberts/src/github.com/monzo/wearedev
+[maintenance]
+	repo = /Users/jacobroberts/src/github.com/monzo/wearedev
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

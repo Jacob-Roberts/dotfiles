@@ -132,7 +132,7 @@ if [ -f "$HOME/.monzozshrc" ] && [ "$USE_MONZO" = true ]; then
 fi
 
 # bun completions
-[ -s "/Users/jacobroberts/.bun/_bun" ] && source "/Users/jacobroberts/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
