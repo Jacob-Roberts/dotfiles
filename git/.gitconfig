@@ -2,9 +2,9 @@
 	name = Jacob Roberts
 	email = jroberts.g1ql8@simplelogin.com
 
-[includeIf "gitdir:~/src/github.com/monzo"]
+[includeIf "gitdir:~/src/github.com/monzo/"]
     path = .gitconfig-monzo
-[includeIf "gitdir:~/developer/boxworks"]
+[includeIf "gitdir:~/developer/boxworks/"]
     path = .gitconfig-boxworks
 
 [color]
