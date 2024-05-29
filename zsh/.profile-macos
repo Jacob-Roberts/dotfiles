@@ -1,0 +1,4 @@
+
+
+alias uuidlower='uuidgen | tr A-F a-f'
+alias uuidcopy='uuidgen | tr A-F a-f | tr -d '\n' | pbcopy'

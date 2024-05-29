@@ -76,10 +76,16 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+if [ Darwin = `uname` ]; then
+  source $HOME/.profile-macos
+fi
+
+if [ Linux = `uname` ]; then
+  source $HOME/.profile-linux
+fi
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -105,10 +111,7 @@ alias gfp='git fetch --prune'
 alias gpap='git pull --prune'
 alias python='python3'
 alias lcs='echo $?'
-if [[ `uname` == Darwin ]]; then
-	alias uuidlower='uuidgen | tr A-F a-f'
-fi
-alias uuidcopy='uuidgen | tr A-F a-f | tr -d '\n' | pbcopy'
+
 # fast node manager
 alias fnmsetup='eval "$(fnm env --use-on-cd)"'
 
@@ -123,17 +126,10 @@ function rebasemaster() {
     git rebase master
 }
 
-if [ -f ~/.monzozshrc ]; then
-    source ~/.monzozshrc
+# Work specific configs
+if [ -f "$HOME/.monzozshrc" ] && [ "$USE_MONZO" = true ]; then
+    source $HOME/.monzozshrc
 fi
-
-# eval "$(bw completion --shell zsh); compdef _bw bw;"
-
-# Created by `pipx` on 2024-04-16 16:29:53
-export PATH="$PATH:/Users/jacobroberts/.local/bin"
-
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 # bun completions
 [ -s "/Users/jacobroberts/.bun/_bun" ] && source "/Users/jacobroberts/.bun/_bun"
