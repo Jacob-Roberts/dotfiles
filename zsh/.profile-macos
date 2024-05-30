@@ -1,4 +1,4 @@
-
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 alias uuidlower='uuidgen | tr A-F a-f'
 alias uuidcopy='uuidgen | tr A-F a-f | tr -d '\n' | pbcopy'
