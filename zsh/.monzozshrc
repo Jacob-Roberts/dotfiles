@@ -35,3 +35,6 @@ eval "$(rbenv init -)"
 
 # Added by Toolbox App
 export PATH="$PATH:/Users/jacobroberts/Library/Application Support/JetBrains/Toolbox/scripts"
+
+# Created by `pipx` on 2024-06-02 21:39:55
+export PATH="$PATH:/Users/jacobroberts/.local/bin"
