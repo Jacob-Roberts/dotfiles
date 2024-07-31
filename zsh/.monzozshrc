@@ -38,3 +38,6 @@ export PATH="$PATH:/Users/jacobroberts/Library/Application Support/JetBrains/Too
 
 # Created by `pipx` on 2024-06-02 21:39:55
 export PATH="$PATH:/Users/jacobroberts/.local/bin"
+
+alias tg='mise x -- tuist generate'
+alias ti='mise x -- tuist install'
