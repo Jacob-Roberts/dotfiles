@@ -108,7 +108,9 @@ export EDITOR="code --wait"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias gfp='git fetch --prune'
+alias gf='git fetch'
 alias gpap='git pull --prune'
+alias gp='git pull'
 alias python='python3'
 alias lcs='echo $?'
 
