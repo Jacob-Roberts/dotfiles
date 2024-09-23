@@ -15,3 +15,9 @@
 
 [push]
   autoSetupRemote = true
+
+[url "ssh://git@github.com/monzo/"]
+	insteadOf = https://github.com/monzo/
+
+[scalar]
+	repo = /Users/jacobroberts/src/github.com/monzo/wearedev

@@ -2,14 +2,15 @@
 ### MONZO ###
 #############
 
-[ -f $HOME/src/github.com/monzo/starter-pack/zshenv ] && source $HOME/src/github.com/monzo/starter-pack/zshenv
-
 alias listemulators='~/Library/Android/sdk/emulator/emulator -list-avds'
 alias openemulator='~/Library/Android/sdk/emulator/emulator -avd Pixel_8_API_34'
 alias emulator='openemulator'
+alias iosdeeplink='xcrun simctl openurl booted'
 
 # Monzo Setup
 export GOPATH=$HOME
+export PATH="/opt/homebrew/opt/go@1.22/bin:$PATH"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
 [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion

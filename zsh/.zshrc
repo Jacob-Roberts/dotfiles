@@ -109,7 +109,7 @@ export EDITOR="code --wait"
 
 alias gfp='git fetch --prune'
 alias gf='git fetch'
-alias gpap='git pull --prune'
+alias gpap='git pull --no-rebase --prune'
 alias gp='git pull'
 alias python='python3'
 alias lcs='echo $?'
