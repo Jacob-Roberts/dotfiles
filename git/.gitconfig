@@ -21,3 +21,6 @@
 
 [scalar]
 	repo = /Users/jacobroberts/src/github.com/monzo/wearedev
+
+[rebase]
+	updateRefs = true

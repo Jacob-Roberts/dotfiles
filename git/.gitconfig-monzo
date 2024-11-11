@@ -12,3 +12,6 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+
+[alias]
+	rebase-current-onto = "!f() { current_branch=$(git branch --show-current); git rebase --onto origin/master $(git merge-base \"$current_branch\" \"$1\") \"$current_branch\"; }; f"
