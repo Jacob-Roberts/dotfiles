@@ -139,3 +139,8 @@ fi
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Appease Monzo ios autosetup scripts, but put it in ~/.monzozshrc
+# eval "$(rbenv init -)"
+# Activate Mise
+# eval "$(mise activate zsh)"

@@ -32,6 +32,8 @@ function adblogin() {
 }
 
 eval "$(rbenv init -)"
+# Activate Mise
+eval "$(mise activate zsh)"
 
 # Added by Toolbox App
 export PATH="$PATH:/Users/jacobroberts/Library/Application Support/JetBrains/Toolbox/scripts"
@@ -41,56 +43,3 @@ export PATH="$PATH:/Users/jacobroberts/.local/bin"
 
 alias tg='mise x -- tuist generate'
 alias ti='mise x -- tuist install'
-
-iosdeeplink() {
-  if [[ $# -lt 1 ]]; then
-    echo "Usage: iosdeeplink <url>"
-    return 1
-  fi
-
-  # Get the list of booted devices
-  local booted_devices
-  booted_devices=$(xcrun simctl list devices -j | jq -c '[.devices[] | .[] | select(.state == "Booted") | {name: .name, udid: .udid}]')
-
-  # Count the number of booted devices
-  local booted_count
-  booted_count=$(echo "$booted_devices" | jq 'length')
-
-  if (( booted_count == 0 )); then
-    echo "No devices in 'Booted' state."
-    return 1
-  elif (( booted_count == 1 )); then
-    # Extract the single device's name
-    local name
-    name=$(echo "$booted_devices" | jq -r '.[0].name')
-
-    echo "🔗 Launching deeplink on device $name: $1"
-    xcrun simctl openurl "$name" "$1"
-  else
-    echo "Multiple booted devices found:"
-    # Display a numbered list of booted devices
-    local i=1
-    echo "$booted_devices" | jq -r '.[] | .name' | while read -r name; do
-      echo "$i - $name"
-      i=$((i + 1))
-    done
-
-    # Prompt the user to select a device by number
-    echo -n "Enter the number of the device to use: "
-    local selected_index
-    read -r selected_index
-
-    # Validate the selected index
-    if ! [[ "$selected_index" =~ ^[0-9]+$ ]] || (( selected_index < 1 || selected_index > booted_count )); then
-      echo "Invalid selection: $selected_index"
-      return 1
-    fi
-
-    # Get the selected device's name
-    local selected_name
-    selected_name=$(echo "$booted_devices" | jq -r --argjson idx "$((selected_index - 1))" '.[$idx].name')
-
-    echo "🔗 Launching deeplink on device $selected_name: $1"
-    xcrun simctl openurl "$selected_name" "$1"
-  fi
-}
