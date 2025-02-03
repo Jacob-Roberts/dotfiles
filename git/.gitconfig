@@ -6,6 +6,12 @@
     path = .gitconfig-monzo
 [includeIf "gitdir:~/developer/boxworks/"]
     path = .gitconfig-boxworks
+[includeIf "gitdir:~/Developer/boxworks/"]
+    path = .gitconfig-boxworks
+[includeIf "gitdir:~/developer/school/"]
+    path = .gitconfig-school
+[includeIf "gitdir:~/Developer/school/"]
+    path = .gitconfig-school
 
 [color]
 	ui = true

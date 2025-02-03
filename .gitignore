@@ -4,3 +4,4 @@ __pycache__
 system/.custom
 system/.exports
 zsh/.zshenv
+zed/.config/zed/prompts/prompts-library-db.0.mdb
