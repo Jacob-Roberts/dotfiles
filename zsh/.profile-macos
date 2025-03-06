@@ -1,4 +1,9 @@
-eval "$(brew shellenv)"
+# Homebrew loads from different places on x86 and arm
+if [ arm64 = `uname -m` ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
 
 alias uuidlower='uuidgen | tr A-F a-f'
 alias uuidcopy='uuidgen | tr A-F a-f | tr -d '\n' | pbcopy'
