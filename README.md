@@ -13,3 +13,7 @@ To remove a symlink, run `stow -D zsh` or `stow -D git`
 ## Homebrew
 
 `brew bundle install --file=./brew/Brewfile`
+
+To create the brewfile
+
+`brew bundle dump --describe --no-vscode`
