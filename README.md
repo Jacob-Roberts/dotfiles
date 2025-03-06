@@ -9,3 +9,7 @@ It mainly targets macOS systems (should install on e.g. Ubuntu as well for many 
 To install, clone the repo to `$HOME/.dotfiles` and then run `stow zsh`, `stow git`, `stow ghostty`, `stow zed`, etc.
 
 To remove a symlink, run `stow -D zsh` or `stow -D git`
+
+## Homebrew
+
+`brew bundle install --file=./brew/Brewfile`

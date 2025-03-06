@@ -1,0 +1,2 @@
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
