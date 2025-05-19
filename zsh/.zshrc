@@ -88,11 +88,12 @@ if [ Linux = `uname` ]; then
 fi
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='zed --wait'
-fi
+export EDITOR='vim'
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='zed --wait'
+# fi
 # export EDITOR="code --wait"
 
 # Compilation flags
