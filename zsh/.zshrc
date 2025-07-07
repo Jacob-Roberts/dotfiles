@@ -146,3 +146,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # eval "$(rbenv init -)"
 # Activate Mise
 # eval "$(mise activate zsh)"
+
+function git-delete-merged-branches() {
+    git checkout -q master && git for-each-ref refs/heads/ "--format=%(refname:short)" --sort=-committerdate | while read branch; do mergeBase=$(git merge-base master $branch) && [[ $(git cherry master $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done
+}

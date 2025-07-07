@@ -15,3 +15,15 @@
 
 [alias]
 	rebase-current-onto = "!f() { current_branch=$(git branch --show-current); git rebase --onto origin/master $(git merge-base \"$current_branch\" \"$1\") \"$current_branch\"; }; f"
+
+[feature]
+	manyFiles = true
+
+[core]
+  fsmonitor = true
+
+[fetch]
+  writeCommitGraph = true
+
+[checkout]
+  workers = 0
