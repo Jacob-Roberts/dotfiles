@@ -88,11 +88,12 @@ if [ Linux = `uname` ]; then
 fi
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='zed --wait'
-fi
+export EDITOR='vim'
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='zed --wait'
+# fi
 # export EDITOR="code --wait"
 
 # Compilation flags
@@ -111,6 +112,7 @@ alias gfp='git fetch --prune'
 alias gf='git fetch'
 alias gpap='git pull --no-rebase --prune'
 alias gp='git pull'
+alias gpm='git fetch origin master:master'
 alias python='python3'
 alias lcs='echo $?'
 
@@ -144,3 +146,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # eval "$(rbenv init -)"
 # Activate Mise
 # eval "$(mise activate zsh)"
+
+function git-delete-merged-branches() {
+    git checkout -q master && git for-each-ref refs/heads/ "--format=%(refname:short)" --sort=-committerdate | while read branch; do mergeBase=$(git merge-base master $branch) && [[ $(git cherry master $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done
+}

@@ -7,7 +7,10 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "vim_mode": false,
+  "git_panel": {
+    "dock": "right"
+  },
+  "vim_mode": true,
   "ssh_connections": [
     {
       "host": "lhr1-node-1.jakerob.pro",
