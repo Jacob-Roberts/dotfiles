@@ -30,3 +30,5 @@
 
 [rebase]
 	updateRefs = true
+[init]
+	defaultBranch = main
