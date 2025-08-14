@@ -10,7 +10,7 @@
   "git_panel": {
     "dock": "right"
   },
-  "vim_mode": true,
+  "vim_mode": false,
   "ssh_connections": [
     {
       "host": "lhr1-node-1.jakerob.pro",

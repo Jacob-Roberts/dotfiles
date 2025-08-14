@@ -16,7 +16,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -f ${GOPATH}/src/github.com/monzo/starter-pack/zshrc ] && source $GOPATH/src/github.com/monzo/starter-pack/zshrc
 
 # Android Studio setup
-export JAVA_HOME=$(/usr/libexec/java_home -v 19)
+export JAVA_HOME=$(/usr/libexec/java_home -v 21)
 export PATH="$PATH:${HOME}/Library/Android/sdk/platform-tools"
 # ANDROID_HOME is used by gradle when an sdk path is not specified in another way
 export ANDROID_HOME="$HOME/Library/Android/sdk"
