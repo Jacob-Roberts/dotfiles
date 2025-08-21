@@ -43,3 +43,5 @@ export PATH="$PATH:/Users/jacobroberts/.local/bin"
 
 alias tg='mise x -- tuist generate'
 alias ti='mise x -- tuist install'
+alias ss="gh pr list -A "@me" -s all | fzf | awk '{print $1}' | xargs shipper deploy --s101"
+alias sp="gh pr list -A "@me" -s all | fzf | awk '{print $1}' | xargs shipper deploy --prod"
