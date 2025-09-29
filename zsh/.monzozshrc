@@ -8,7 +8,8 @@ alias emulator='openemulator'
 
 # Monzo Setup
 export GOPATH=$HOME
-export PATH="/opt/homebrew/opt/go@1.22/bin:$PATH"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$(brew --prefix golang)/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
