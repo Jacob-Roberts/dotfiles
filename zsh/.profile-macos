@@ -7,6 +7,7 @@ fi
 
 alias uuidlower='uuidgen | tr A-F a-f'
 alias uuidcopy='uuidgen | tr A-F a-f | tr -d '\n' | pbcopy'
+alias brewlist='brew desc $(brew list --installed-on-request) | column -t -s ":"'
 
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
