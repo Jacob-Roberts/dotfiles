@@ -4,15 +4,15 @@
 	signingkey = ~/.ssh/id_ed25519.pub
 
 [includeIf "gitdir:~/src/github.com/monzo/"]
-    path = .gitconfig-monzo
+    path = config-monzo
 [includeIf "gitdir:~/developer/boxworks/"]
-    path = .gitconfig-boxworks
-[includeIf "gitdir:~/Developer/boxworks/"]
-    path = .gitconfig-boxworks
+    path = config-boxworks
+[includeIf "gitdir:~/developer/boxworks/"]
+    path = config-boxworks
 [includeIf "gitdir:~/developer/school/"]
-    path = .gitconfig-school
-[includeIf "gitdir:~/Developer/school/"]
-    path = .gitconfig-school
+    path = config-school
+[includeIf "gitdir:~/developer/school/"]
+    path = config-school
 
 [color]
 	ui = true
