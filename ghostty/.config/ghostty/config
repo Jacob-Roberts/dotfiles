@@ -1,2 +1,3 @@
 macos-option-as-alt = right
 cursor-click-to-move = 1
+keybind = shift+enter=text:\n
