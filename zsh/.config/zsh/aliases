@@ -38,3 +38,9 @@ function rebasemaster() {
 function git-delete-merged-branches() {
     git checkout -q master && git for-each-ref refs/heads/ "--format=%(refname:short)" --sort=-committerdate | while read branch; do mergeBase=$(git merge-base master $branch) && [[ $(git cherry master $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done
 }
+
+if [ Darwin = `uname` ]; then
+  alias uuidlower='uuidgen | tr A-F a-f'
+  alias uuidcopy='uuidgen | tr A-F a-f | tr -d '\n' | pbcopy'
+  alias brewlist='brew desc $(brew list --installed-on-request) | column -t -s ":" && brew desc $(brew list --cask) | column -t -s ":"'
+fi

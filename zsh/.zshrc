@@ -3,14 +3,6 @@ source "$XDG_CONFIG_HOME/zsh/init"
 source "$XDG_CONFIG_HOME/zsh/aliases"
 [[ -r "$XDG_CONFIG_HOME/zsh/secrets" ]] && source "$XDG_CONFIG_HOME/zsh/secrets"
 
-if [ Darwin = `uname` ]; then
-  source "$XDG_CONFIG_HOME/zsh/macos"
-fi
-
-if [ Linux = `uname` ]; then
-  source "$XDG_CONFIG_HOME/zsh/linux"
-fi
-
 # Work specific configs
 if [ -f "$XDG_CONFIG_HOME/zsh/monzo" ] && [ "$USE_MONZO" = true ]; then
     source $XDG_CONFIG_HOME/zsh/monzo
