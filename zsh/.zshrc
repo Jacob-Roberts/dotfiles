@@ -12,8 +12,8 @@ if [ Linux = `uname` ]; then
 fi
 
 # Work specific configs
-if [ -f "$HOME/.monzozshrc" ] && [ "$USE_MONZO" = true ]; then
-    source $HOME/.monzozshrc
+if [ -f "$XDG_CONFIG_HOME/zsh/monzo" ] && [ "$USE_MONZO" = true ]; then
+    source $XDG_CONFIG_HOME/zsh/monzo
 fi
 
 # Preferred editor for local and remote sessions
