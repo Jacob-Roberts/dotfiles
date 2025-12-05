@@ -22,5 +22,3 @@ esac
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
 export PATH="$HOME/.docker/bin:$PATH"
-
-eval "$(zoxide init zsh)"

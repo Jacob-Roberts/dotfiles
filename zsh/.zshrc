@@ -1,4 +1,5 @@
-source "$XDG_CONFIG_HOME/zsh/oh-my-zsh"
+source "$XDG_CONFIG_HOME/zsh/shell"
+source "$XDG_CONFIG_HOME/zsh/init"
 source "$XDG_CONFIG_HOME/zsh/aliases"
 [[ -r "$XDG_CONFIG_HOME/zsh/secrets" ]] && source "$XDG_CONFIG_HOME/zsh/secrets"
 
