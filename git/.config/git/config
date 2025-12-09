@@ -3,6 +3,9 @@
 	email = jroberts.g1ql8@simplelogin.com
 	signingkey = ~/.ssh/id_ed25519.pub
 
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
 [includeIf "gitdir:~/src/github.com/monzo/"]
     path = config-monzo
 [includeIf "gitdir:~/developer/boxworks/"]
