@@ -47,3 +47,10 @@ alias ti='mise x -- tuist install'
 alias ss="gh pr list -A "@me" -s all | fzf | awk '{print $1}' | xargs shipper deploy --s101"
 alias sp="gh pr list -A "@me" -s all | fzf | awk '{print $1}' | xargs shipper deploy --prod"
 alias lintwearedev="$GOPATH/bin/lint"
+
+function git-go-test-all-changed-services() {
+  local services=`git diff master --name-only  | cut -d'/' -f1 | uniq`
+  echo Testing: $services
+  echo $services | xargs -I % go test ./%/...
+}
+alias gt=git-go-test-all-changed-services

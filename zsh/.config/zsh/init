@@ -20,3 +20,5 @@ fi
 # if [ Linux = `uname` ]; then
 # ...
 # fi
+
+export PATH="$HOME/bin:$PATH"
