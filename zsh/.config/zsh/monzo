@@ -54,3 +54,11 @@ function git-go-test-all-changed-services() {
   echo $services | xargs -I % go test ./%/...
 }
 alias gt=git-go-test-all-changed-services
+
+function updatexcode() {
+  echo "Should be run from ios-app directory"
+  LATEST_VALID_XCODE=$(xcodes list | grep -v Beta | grep -v Candidate | grep -v GM | grep -F $TUIST_XCODE_VERSION | tail -n1 | awk '{print $1}')
+  echo "Latest valid Xcode version: $LATEST_VALID_XCODE"
+  xcodes install "$LATEST_VALID_XCODE" --experimental-unxip
+  xcodes select $LATEST_VALID_XCODE
+}
