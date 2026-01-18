@@ -9,6 +9,7 @@ alias fnmsetup='eval "$(fnm env --use-on-cd)"'
 
 alias d='docker'
 alias g='git'
+alias k='kubectl'
 alias gcm='git commit -m'
 
 if command -v zoxide &> /dev/null; then
