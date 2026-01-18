@@ -3,6 +3,9 @@ if [ Darwin = `uname` ]; then
   source "$XDG_CONFIG_HOME/zsh/init-macos"
 fi
 
+autoload -Uz compinit
+compinit
+
 if command -v mise &> /dev/null; then
   eval "$(mise activate zsh)"
 fi
