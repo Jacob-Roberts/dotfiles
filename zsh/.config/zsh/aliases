@@ -11,6 +11,7 @@ alias d='docker'
 alias g='git'
 alias k='kubectl'
 alias gcm='git commit -m'
+alias n='nvim'
 
 if command -v zoxide &> /dev/null; then
   alias cd="zd"
