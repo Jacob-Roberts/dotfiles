@@ -62,3 +62,5 @@ function updatexcode() {
   xcodes install "$LATEST_VALID_XCODE" --experimental-unxip
   xcodes select $LATEST_VALID_XCODE
 }
+
+alias rpcmap-all='rpcmap -generate $(ls -d service.* | sed "s|^|github.com/monzo/wearedev/|" | tr "\n" " ")'

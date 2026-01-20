@@ -21,4 +21,3 @@ export EDITOR='vim'
 # eval "$(rbenv init -)"
 # Activate Mise
 # eval "$(mise activate zsh)"
-
