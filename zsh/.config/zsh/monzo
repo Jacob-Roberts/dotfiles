@@ -64,26 +64,5 @@ function updatexcode() {
 }
 
 rpcmap-all() {
-  # 1. Find directories starting with 'service.' that contain 'manifests/egress'
-  # [ -d $REPLY/manifests/egress ] is the condition checked for every match
-  local services=(service.*(e:'[ -d $REPLY/manifests/egress ]':))
-
-  if [[ ${#services[@]} -eq 0 ]]; then
-    echo "No services found with a manifests/egress folder."
-    return 1
-  fi
-
-  echo "Found ${#services[@]} services. Processing in chunks of 30..."
-
-  # 2. Loop through in chunks of 30
-  for ((i=1; i<=${#services[@]}; i+=30)); do
-    # Zsh arrays are 1-indexed. We grab a slice of 30.
-    local chunk=($services[$i,$((i+29))])
-    
-    # 3. Prepend './' to each item in the chunk
-    local formatted_chunk=(${^chunk/#/./})
-    
-    echo "--> Running rpcmap on group starting with: ${chunk[1]}"
-    rpcmap -generate $formatted_chunk
-  done
+  $XDG_CONFIG_HOME/zsh/rpcmap-all --diff
 }
