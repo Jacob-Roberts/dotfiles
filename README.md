@@ -6,6 +6,6 @@ It mainly targets macOS systems (should install on e.g. Ubuntu as well for many 
 
 .zshenv is used for non-synced config
 
-To install, clone the repo to `$HOME/.dotfiles` and then run `stow zsh`, `stow git`, `stow ghostty`, `stow zed`, etc.
+To install, clone the repo to `$HOME/.dotfiles` and then run `stow --no-folding zsh`, `stow --no-folding git`, `stow --no-folding ghostty`, `stow --no-folding zed`, etc.
 
 To remove a symlink, run `stow -D zsh` or `stow -D git`

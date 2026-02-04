@@ -4,65 +4,15 @@
 // documentation: https://zed.dev/docs/configuring-zed
 //
 // To see all of Zed's default settings without changing your
-// custom settings, run the `open default settings` command
-// from the command palette or from `Zed` application menu.
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "git_panel": {
-    "dock": "right"
-  },
-  "vim_mode": false,
-  "ssh_connections": [
-    {
-      "host": "lhr1-node-1.jakerob.pro",
-      "username": "jacobroberts",
-      "projects": [
-        {
-          "paths": ["~/homelab"]
-        }
-      ]
-    },
-    {
-      "host": "iad1-node-1.jakerob.pro",
-      "username": "jacobroberts",
-      "projects": [
-        {
-          "paths": ["~/homelab"]
-        }
-      ]
-    },
-    {
-      "host": "iad1-node-2.jakerob.pro",
-      "username": "jacobroberts",
-      "projects": [
-        {
-          "paths": ["~/homelab"]
-        }
-      ]
-    },
-    {
-      "host": "iad1-node-3.jakerob.pro",
-      "username": "jacobroberts",
-      "projects": [
-        {
-          "paths": ["~/homelab"]
-        }
-      ]
-    }
-  ],
-  "agent": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
-    },
-  },
   "base_keymap": "VSCode",
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
-  },
   "ui_font_size": 16,
-  "buffer_font_size": 16,
-  "project_panel": {
-    "dock": "right"
-  }
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark",
+  },
 }
