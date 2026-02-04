@@ -1,6 +1,8 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 add_newline = true
 command_timeout = 200
-format = "[$directory$git_branch$git_status]($style)$character"
+format = "[$os$hostname$kubernetes$directory$git_branch$git_status]($style)$character"
 
 [character]
 error_symbol = "[✗](bold cyan)"
@@ -30,3 +32,22 @@ stashed    = ""
 staged     = ""
 renamed    = ""
 deleted    = ""
+
+[os]
+disabled = false
+
+[os.symbols]
+Windows = '  '
+Arch = '󰣇 '
+Ubuntu = ' '
+Macos = '󰀵 '
+
+[hostname]
+ssh_only = true
+format = "[$hostname](bold yellow) "
+disabled = false
+
+[kubernetes]
+format = 'via [󱃾 $context\($namespace\)](bold purple) '
+disabled = true
+detect_env_vars = ["KUBECONFIG", "KUBE_CONTEXT"]

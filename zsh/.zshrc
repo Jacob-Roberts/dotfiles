@@ -2,6 +2,7 @@ source "$XDG_CONFIG_HOME/zsh/shell"
 source "$XDG_CONFIG_HOME/zsh/init"
 source "$XDG_CONFIG_HOME/zsh/aliases"
 [[ -r "$XDG_CONFIG_HOME/zsh/secrets" ]] && source "$XDG_CONFIG_HOME/zsh/secrets"
+[[ -f "$XDG_CONFIG_HOME/zsh/starship.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/starship.zsh"
 
 # Work specific configs
 if [ -f "$XDG_CONFIG_HOME/zsh/monzo" ] && [ "$USE_MONZO" = true ]; then
