@@ -1,6 +1,10 @@
 # Important to go first, so we can source homebrew
 if [ Darwin = `uname` ]; then
-  source "$XDG_CONFIG_HOME/zsh/init-macos"
+  source "$XDG_CONFIG_HOME/zsh/init-macos.zsh"
+fi
+
+if [ Linux = `uname` ]; then
+  source "$XDG_CONFIG_HOME/zsh/init-linux.zsh"
 fi
 
 autoload -Uz compinit
@@ -33,9 +37,5 @@ if command -v nvim &> /dev/null; then
 elif command -v vim &> /dev/null; then
   export EDITOR='vim'
 fi
-
-# if [ Linux = `uname` ]; then
-# ...
-# fi
 
 export PATH="$HOME/bin:$PATH"

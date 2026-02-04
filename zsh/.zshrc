@@ -1,12 +1,10 @@
-source "$XDG_CONFIG_HOME/zsh/shell"
-source "$XDG_CONFIG_HOME/zsh/init"
-source "$XDG_CONFIG_HOME/zsh/aliases"
-[[ -r "$XDG_CONFIG_HOME/zsh/secrets" ]] && source "$XDG_CONFIG_HOME/zsh/secrets"
-[[ -f "$XDG_CONFIG_HOME/zsh/starship.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/starship.zsh"
+[[ -r "$XDG_CONFIG_HOME/zsh/init-shared.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/init-shared.zsh"
+[[ -r "$XDG_CONFIG_HOME/zsh/aliases.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/aliases.zsh"
+[[ -r "$XDG_CONFIG_HOME/zsh/secrets.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/secrets.zsh"
 
 # Work specific configs
-if [ -f "$XDG_CONFIG_HOME/zsh/monzo" ] && [ "$USE_MONZO" = true ]; then
-    source $XDG_CONFIG_HOME/zsh/monzo
+if [ -r "$XDG_CONFIG_HOME/zsh/monzo.zsh" ] && [ "$USE_MONZO" = true ]; then
+    source $XDG_CONFIG_HOME/zsh/monzo.zsh
 fi
 
 # Appease Monzo ios autosetup scripts. This is included in $XDG_CONFIG_HOME/zsh/monzo
