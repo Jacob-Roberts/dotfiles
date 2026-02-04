@@ -1,5 +1,9 @@
-alias gfp='git fetch --prune'
+alias g='git'
+alias gcm='git commit -m'
+alias gcam='git commit -a -m'
+alias gcad='git commit -a --amend'
 alias gf='git fetch'
+alias gfp='git fetch --prune'
 alias gpap='git pull --no-rebase --prune'
 alias gp='git pull'
 alias gpm='git fetch origin master:master'
@@ -8,10 +12,8 @@ alias lcs='echo $?'
 alias fnmsetup='eval "$(fnm env --use-on-cd)"'
 
 alias d='docker'
-alias g='git'
 alias k='kubectl'
-alias gcm='git commit -m'
-alias n='nvim'
+n() { if [ "$#" -eq 0 ]; then nvim .; else nvim "$@"; fi; }
 
 if command -v zoxide &> /dev/null; then
   alias cd="zd"
@@ -25,6 +27,16 @@ if command -v zoxide &> /dev/null; then
     fi
   }
 fi
+
+# File system
+if command -v eza &> /dev/null; then
+  alias ls='eza -lh --group-directories-first --icons=auto'
+  alias lsa='ls -a'
+  alias lt='eza --tree --level=2 --long --icons --git'
+  alias lta='lt -a'
+fi
+
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 
 function findandkill() {
     lsof -t -i tcp:$1 | xargs kill -9
