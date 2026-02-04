@@ -1,0 +1,9 @@
+# Changes require a relaunch of Hyprland to take effect.
+
+export TERMINAL=xdg-terminal-exec
+
+if command -v nvim &> /dev/null; then
+  export EDITOR='nvim'
+elif command -v vim &> /dev/null; then
+  export EDITOR='vim'
+fi
