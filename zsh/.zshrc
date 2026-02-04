@@ -1,3 +1,4 @@
+[[ -r "$XDG_CONFIG_HOME/zsh/shell.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/shell.zsh"
 [[ -r "$XDG_CONFIG_HOME/zsh/init-shared.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/init-shared.zsh"
 [[ -r "$XDG_CONFIG_HOME/zsh/aliases.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/aliases.zsh"
 [[ -r "$XDG_CONFIG_HOME/zsh/secrets.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/secrets.zsh"
