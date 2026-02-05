@@ -70,7 +70,7 @@
   },
   "jest.autoRun": "off",
   "editor.accessibilitySupport": "off",
-  "editor.fontFamily": "'JetBrains Mono', 'Hack Nerd Font', Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "totalTypeScript.hideAllTips": false,
   "totalTypeScript.hideBasicTips": true,
@@ -232,6 +232,7 @@
   "git.openRepositoryInParentFolders": "always",
   "github.copilot.nextEditSuggestions.enabled": false,
   "docker.extension.enableComposeLanguageServer": false,
+  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
   "extensions.ignoreRecommendations": true,
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
@@ -249,7 +250,5 @@
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
   "redoclyOpenAPI.user.anonymousId": "anon_01KBYMGQ5FS6PNYFSHZT1SZGNN",
-  "editor.renderWhitespace": "all",
-  "git.replaceTagsWhenPull": true,
-  "terminal.external.osxExec": "Ghostty.app"
+  "editor.renderWhitespace": "all"
 }

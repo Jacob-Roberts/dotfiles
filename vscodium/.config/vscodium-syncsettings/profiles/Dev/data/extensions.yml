@@ -1,0 +1,151 @@
+disabled: []
+enabled:
+  - id: astro-build.astro-vscode
+    uuid: 1fbbc8b0-7432-4b7e-8774-3336151da2f3
+  - id: biomejs.biome
+    uuid: 2c992d35-3965-4369-856e-fdfbb0af2ce2
+  - id: bradlc.vscode-tailwindcss
+    uuid: 4db62a7c-7d70-419c-96d2-6c3a4dc77ea5
+  - id: docker.docker
+    uuid: aa98a064-0f79-4961-a4b7-78df16d547ee
+  - id: golang.go
+    uuid: d6f6cfea-4b6f-41f4-b571-6ad2ab7918da
+  - id: hverlin.mise-vscode
+    uuid: 92fb523e-77c1-43a6-81f9-859a220809ec
+  - id: mattpocock.ts-error-translator
+    uuid: e78c7d39-3c30-4ef3-a3bd-b5b641cb91eb
+  - id: ms-playwright.playwright
+    uuid: f53b1d43-eef4-4909-99ca-56b5fa3e108c
+  - id: mtxr.sqltools
+    uuid: 6a2bbab0-d8f0-43fa-9b26-e6a3b7892a0b
+  - id: qwtel.sqlite-viewer
+    uuid: 94fef082-6c2d-43ac-9540-6617b51a3a12
+  - id: tamasfe.even-better-toml
+    uuid: b2215d5f-675e-4a2b-b6ac-1ca737518b78
+  - id: vitest.explorer
+    uuid: ab3534a7-eaae-4f75-9735-62bfd758b220
+  - id: YoavBls.pretty-ts-errors
+    uuid: 1e149c89-8f97-447e-863d-1146f0ad1b70
+uninstall:
+  - id: albert.TabOut
+    uuid: 4ef6c2d5-de36-45a1-9015-18c1d4a3a25e
+  - id: charliermarsh.ruff
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: dbaeumer.vscode-eslint
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: donjayamanne.python-environment-manager
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: EditorConfig.EditorConfig
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: enkia.tokyo-night
+    uuid: 1cac7443-911e-48b9-8341-49f3880c288a
+  - id: esbenp.prettier-vscode
+    uuid: 96fa4707-6983-4489-b7c5-d5ffdfdcce90
+  - id: GitHub.codespaces
+    uuid: 4023d3e5-c840-4cdd-8b54-51c77548aa3f
+  - id: GitHub.copilot-chat
+    uuid: 7ec7d6e6-b89e-4cc5-a59b-d6c4d238246f
+  - id: JordanHury.sqltools-cassandra
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: jovejonovski.ocean-green
+    uuid: bc3616ca-5332-4bb0-a7ff-7b7987b37e7f
+  - id: kumar-harsh.graphql-for-vscode
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: LawrenceGrant.cql
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: mathiasfrohlich.Kotlin
+    uuid: d36bad53-910d-481a-a7ee-8992450665f6
+  - id: MathWorks.language-matlab
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: moyu.snapcode
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: ms-azuretools.vscode-docker
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: ms-python.black-formatter
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: ms-python.debugpy
+    uuid: 4bd5d2c9-9d65-401a-b0b2-7498d9f17615
+  - id: ms-python.mypy-type-checker
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: ms-python.vscode-pylance
+    uuid: 364d2426-116a-433a-a5d8-a5098dc3afbd
+  - id: ms-python.vscode-python-envs
+    uuid: b41d8e8a-b6d4-4202-8f07-7189bdda81be
+  - id: ms-toolsai.jupyter
+    uuid: 6c2f1801-1e7f-45b2-9b5c-7782f1e076e8
+  - id: ms-toolsai.jupyter-keymap
+    uuid: 9f6dc8db-620c-4844-b8c5-e74914f1be27
+  - id: ms-toolsai.jupyter-renderers
+    uuid: b15c72f8-d5fe-421a-a4f7-27ed9f6addbf
+  - id: ms-toolsai.tensorboard
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: ms-toolsai.vscode-jupyter-cell-tags
+    uuid: ab4fb32a-befb-4102-adf9-1652d0cd6a5e
+  - id: ms-toolsai.vscode-jupyter-slideshow
+    uuid: e153ca70-b543-4865-b4c5-b31d34185948
+  - id: ms-vscode-remote.remote-containers
+    uuid: 93ce222b-5f6f-49b7-9ab1-a0463c6238df
+  - id: ms-vscode-remote.remote-ssh
+    uuid: 607fd052-be03-4363-b657-2bd62b83d28a
+  - id: ms-vscode-remote.remote-ssh-edit
+    uuid: bfeaf631-bcff-4908-93ed-fda4ef9a0c5c
+  - id: ms-vscode-remote.remote-wsl
+    uuid: f0c5397b-d357-4197-99f0-cb4202f22818
+  - id: ms-vscode-remote.vscode-remote-extensionpack
+    uuid: 23d72dfc-8dd1-4e30-926e-8783b4378f13
+  - id: ms-vscode.cmake-tools
+    uuid: 7c889349-8749-43d4-8b5e-08939936d7f4
+  - id: ms-vscode.cpptools
+    uuid: 690b692e-e8a9-493f-b802-8089d50ac1b2
+  - id: ms-vscode.cpptools-extension-pack
+    uuid: 3957b2f6-f086-49b5-a7b4-5da772123130
+  - id: ms-vscode.cpptools-themes
+    uuid: 99b17261-8f6e-45f0-9ad5-a69c6f509a4f
+  - id: ms-vscode.remote-explorer
+    uuid: 11858313-52cc-4e57-b3e4-d7b65281e34b
+  - id: ms-vscode.remote-server
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: ms-vsliveshare.vsliveshare
+    uuid: 5a6dc0d5-dc02-4121-8e24-cad33a2ff0af
+  - id: njpwerner.autodocstring
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: nvidia.nsight-vscode-edition
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: Orta.vscode-jest
+    uuid: 7997a8ae-1fae-4022-b834-12f6318aeffd
+  - id: oven.bun-vscode
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: Postman.postman-for-vscode
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: Prisma.prisma
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: Redocly.openapi-vs-code
+    uuid: 43ac9139-82a5-4580-856a-71792a204014
+  - id: rust-lang.rust-analyzer
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: stoplight.spectral
+    uuid: d19291a7-3a53-485a-a4d4-a2e55ae239e0
+  - id: styled-components.vscode-styled-components
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: timonwong.shellcheck
+    uuid: f95d8fff-f70a-4ae5-bb06-5c47ddbc8fc6
+  - id: tomoki1207.pdf
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: treblle.apiinsights-vscode
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: twxs.cmake
+    uuid: 2be7cf14-2603-402e-9771-fd79df83cdf8
+  - id: TypeScriptTeam.native-preview
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: unifiedjs.vscode-mdx
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: vadimcn.vscode-lldb
+    uuid: 00000000-0000-0000-0000-000000000000
+  - id: VisualStudioExptTeam.intellicode-api-usage-examples
+    uuid: 9fa2a00e-3bfa-4c2a-abc4-a865bb2b5cf3
+  - id: VisualStudioExptTeam.vscodeintellicode
+    uuid: 876e8f93-74d0-4f4f-91b7-34a09f19f444
+  - id: webfreak.debug
+    uuid: 2fd22b8e-b3b8-4e7f-9a28-a5e2d1bdd0d4
+  - id: zxh404.vscode-proto3
+    uuid: 00000000-0000-0000-0000-000000000000
