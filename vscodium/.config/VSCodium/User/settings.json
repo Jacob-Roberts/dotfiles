@@ -1,0 +1,256 @@
+{
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "vsicons.dontShowNewVersionMessage": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "git.autofetch": true,
+  "explorer.confirmDelete": false,
+  "git.enableSmartCommit": true,
+  "editor.suggestSelection": "first",
+  "explorer.confirmDragAndDrop": false,
+  "gitlens.gitCommands.skipConfirmations": [
+    "fetch:command",
+    "stash-push:command",
+    "switch:command",
+    "branch-create:command"
+  ],
+  "editor.linkedEditing": true,
+  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "scm.showHistoryGraph": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "files.defaultLanguage": "${activeEditorLanguage}",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "editor.tabSize": 2,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "docker.containers.label": "ContainerName",
+  "git.confirmSync": false,
+  "editor.inlineSuggest.enabled": true,
+  "omnisharp.enableRoslynAnalyzers": true,
+  "[dockercompose]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.autoReplies": {
+    "Terminate batch job (Y/N)?": "Y\r"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[nginx]": {
+    "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+  },
+  "jest.autoRun": "off",
+  "editor.accessibilitySupport": "off",
+  "editor.fontFamily": "'JetBrains Mono', 'Hack Nerd Font', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "totalTypeScript.hideAllTips": false,
+  "totalTypeScript.hideBasicTips": true,
+  "javascript.preferences.importModuleSpecifierEnding": "minimal",
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "workbench.editor.empty.hint": "hidden",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": false,
+    "scminput": false,
+    ".env": false,
+    "properties": false,
+    "terraform-vars": false,
+    "ansible": true
+  },
+  "go.toolsEnvVars": {
+    "GO111MODULE": "off"
+  },
+  "go.languageServerFlags": [
+    "serve",
+    "-rpc.trace",
+    "--debug=localhost:6060"
+  ],
+  "go.alternateTools": {
+     "gopls": "monzo-gopls"
+  },
+  "gopls": {
+    "build.directoryFilters": [
+        "-vendor",
+        "-manifests",
+        "-**/node_modules",
+        "-static-check-rules"
+    ],
+    "formatting.local": "github.com/monzo"
+  },
+  "protoc": {
+    "options": [
+      "--proto_path=${env.GOPATH}/src"
+    ],
+  },
+  "workbench.sideBar.location": "right",
+  "jupyter.askForKernelRestart": false,
+  "monzo.codeowners": [
+    "@monzo/business-banking-spend-management"
+  ],
+  "window.confirmSaveUntitledWorkspace": false,
+  "sqltools.connections": [
+    {
+      "server": "localhost",
+      "port": 9042,
+      "previewLimit": 50,
+      "driver": "Cassandra",
+      "name": "@localhost",
+      "password": ""
+    }
+  ],
+  "terminal.integrated.commandsToSkipShell": [
+    "github.copilot.terminal.suggestCommand",
+    "matlab.interrupt"
+  ],
+  "remote.SSH.remotePlatform": {
+    "192.168.0.97": "linux",
+    "192.168.42.15": "linux",
+    "150.136.144.201": "linux",
+    "docker-node-2": "linux",
+    "wandering-laine-infrastructure": "linux",
+    "iad1-node-1": "linux"
+  },
+  "playwright.reuseBrowser": true,
+  "playwright.showTrace": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+  "prisma.showPrismaDataPlatformNotification": false,
+  "totalTypeScript.hiddenTips": [
+    "passing-generics-to-types",
+    "interface-with-generics",
+    "generic-slots-in-functions",
+    "record-utility-type",
+    "in-operator-narrowing",
+    "returntype-utility-type",
+    "tuple-type",
+    "partial-utility-type",
+    "keyof",
+    "typeof",
+    "omit-utility-type"
+  ],
+  "go.toolsManagement.autoUpdate": true,
+  "redhat.telemetry.enabled": false,
+  "gitlens.views.branches.branches.layout": "list",
+  "[astro]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[mdx]": {
+    "editor.defaultFormatter": "unifiedjs.vscode-mdx"
+  },
+  "C_Cpp.default.compilerPath": "/usr/bin/clang",
+  "gitlens.views.scm.grouped.views": {
+    "commits": false,
+    "branches": false,
+    "remotes": false,
+    "stashes": false,
+    "tags": false,
+    "worktrees": false,
+    "contributors": false,
+    "repositories": false,
+    "searchAndCompare": false,
+    "launchpad": false
+  },
+  "settingsSync.ignoredSettings": [
+    "workbench.externalBrowser"
+  ],
+  "workbench.externalBrowser": "Chrome",
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "[handlebars]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.enablePreview": false,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "containers.containers.label": "ContainerName",
+  "python.analysis.typeCheckingMode": "standard",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+    "/var/folders/q9/d31gvl1s46d17zvmgkhc_yq00000gn/T/postman-http-request-post-response.instructions.md": true,
+    "/var/folders/q9/d31gvl1s46d17zvmgkhc_yq00000gn/T/postman-http-request-pre-request.instructions.md": true,
+    "/var/folders/mk/svlrx5v52_15bvwb38vbklvw0000gn/T/postman-http-request-post-response.instructions.md": true,
+    "/var/folders/mk/svlrx5v52_15bvwb38vbklvw0000gn/T/postman-http-request-pre-request.instructions.md": true,
+    "/tmp/postman-http-request-post-response.instructions.md": true,
+    "/tmp/postman-http-request-pre-request.instructions.md": true,
+    "/tmp/postman-collections-post-response.instructions.md": true,
+    "/tmp/postman-collections-pre-request.instructions.md": true,
+    "/tmp/postman-folder-post-response.instructions.md": true,
+    "/tmp/postman-folder-pre-request.instructions.md": true,
+    "C:\\Users\\JACOBR~1\\AppData\\Local\\Temp\\postman-collections-post-response.instructions.md": true,
+    "C:\\Users\\JACOBR~1\\AppData\\Local\\Temp\\postman-collections-pre-request.instructions.md": true,
+    "C:\\Users\\JACOBR~1\\AppData\\Local\\Temp\\postman-folder-post-response.instructions.md": true,
+    "C:\\Users\\JACOBR~1\\AppData\\Local\\Temp\\postman-folder-pre-request.instructions.md": true,
+    "C:\\Users\\JACOBR~1\\AppData\\Local\\Temp\\postman-http-request-post-response.instructions.md": true,
+    "C:\\Users\\JACOBR~1\\AppData\\Local\\Temp\\postman-http-request-pre-request.instructions.md": true,
+    "/var/folders/q9/d31gvl1s46d17zvmgkhc_yq00000gn/T/postman-collections-post-response.instructions.md": true,
+    "/var/folders/q9/d31gvl1s46d17zvmgkhc_yq00000gn/T/postman-collections-pre-request.instructions.md": true,
+    "/var/folders/q9/d31gvl1s46d17zvmgkhc_yq00000gn/T/postman-folder-post-response.instructions.md": true,
+    "/var/folders/q9/d31gvl1s46d17zvmgkhc_yq00000gn/T/postman-folder-pre-request.instructions.md": true,
+    "/var/folders/mk/svlrx5v52_15bvwb38vbklvw0000gn/T/postman-collections-post-response.instructions.md": true,
+    "/var/folders/mk/svlrx5v52_15bvwb38vbklvw0000gn/T/postman-collections-pre-request.instructions.md": true,
+    "/var/folders/mk/svlrx5v52_15bvwb38vbklvw0000gn/T/postman-folder-post-response.instructions.md": true,
+    "/var/folders/mk/svlrx5v52_15bvwb38vbklvw0000gn/T/postman-folder-pre-request.instructions.md": true
+  },
+  "git.openRepositoryInParentFolders": "always",
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "docker.extension.enableComposeLanguageServer": false,
+  "extensions.ignoreRecommendations": true,
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "chat.tools.terminal.autoApprove": {
+    "/^uv run example_ml_usage\\.py$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^uv run train_model\\.py$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  },
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "redoclyOpenAPI.user.anonymousId": "anon_01KBYMGQ5FS6PNYFSHZT1SZGNN",
+  "editor.renderWhitespace": "all",
+  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+  "git.replaceTagsWhenPull": true,
+  "terminal.external.osxExec": "Ghostty.app"
+}
