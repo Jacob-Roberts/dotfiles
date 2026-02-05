@@ -51,3 +51,15 @@ if [[ -n "${terminfo[kcuu1]}" ]]; then
   bindkey -M viins "${terminfo[kcuu1]}" up-line-or-beginning-search
   bindkey -M vicmd "${terminfo[kcuu1]}" up-line-or-beginning-search
 fi
+
+
+# -------------------------------------------
+# 4. chpwd Hook - Run Commands on Directory Change
+# -------------------------------------------
+# NOTE: Only one chpwd hook can be defined at once
+# To merge them, use add-zsh-hook which is mentioned below
+
+# Example: List directory contents on cd
+chpwd() {
+  ls
+}
