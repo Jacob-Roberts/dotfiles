@@ -46,12 +46,6 @@ if command -v fzf &> /dev/null; then
   eval "$(fzf --zsh)"
 fi
 
-FNM_PATH="$HOME/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$HOME/.local/share/fnm:$PATH"
-  eval "`fnm env`"
-fi
-
 if command -v kubectl &> /dev/null; then
   source <(kubectl completion zsh)
 fi

@@ -8,12 +8,9 @@ alias emulator='openemulator'
 
 # Monzo Setup
 export GOPATH=$HOME
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$(brew --prefix golang)/bin:$PATH"
+export GOROOT="/opt/homebrew/opt/go/libexec"
+export PATH="/opt/homebrew/opt/go/bin:$PATH"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
-[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 [ -f ${GOPATH}/src/github.com/monzo/starter-pack/zshrc ] && source $GOPATH/src/github.com/monzo/starter-pack/zshrc
 
 # Android Studio setup
@@ -22,19 +19,6 @@ export PATH="$PATH:${HOME}/Library/Android/sdk/platform-tools"
 # ANDROID_HOME is used by gradle when an sdk path is not specified in another way
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$ANDROID_HOME/emulator":"$ANDROID_HOME/tools":"$ANDROID_HOME/platform-tools":$PATH
-# export ANDROID_HOME="/opt/homebrew/share/android-commandlinetools"
-# export ANDROID_SDK_ROOT=$ANDROID_HOME
-# export ANDROID_AVD_HOME="${HOME}/.android/avd"
-# export PATH="$PATH:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools/bin"
-
-# ex: adblogin mk70ap3k8oadf9cnmvnisoudg@testing.monzo.com
-function adblogin() {
-    droid deeplink $(£ -e s101 "api get /nonprod.test-user-email-log/magic-link recipient_email==\"$1\"" | jq .link -r);
-}
-
-eval "$(rbenv init -)"
-# Activate Mise
-eval "$(mise activate zsh)"
 
 # Added by Toolbox App
 export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"

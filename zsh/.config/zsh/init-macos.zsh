@@ -7,17 +7,9 @@ fi
 
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
-source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+[ -f ~/.orbstack/shell/init.zsh ] && source ~/.orbstack/shell/init.zsh
 
 export PATH="$HOME/.docker/bin:$PATH"
-
-# pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
 
 # bun
 BUN_INSTALL="$HOME/.bun"
