@@ -29,5 +29,17 @@ WORDCHARS=''
 
 # Example: List directory contents on cd
 chpwd() {
+  # Define the directories you want to ignore
+  local ignore_dirs=("$HOME/Downloads" "$HOME/src/github.com/monzo/wearedev")
+
+  # Check if the current directory is in the list
+  for dir in "${ignore_dirs[@]}"; do
+    if [[ "$PWD" == "$dir" ]]; then
+      return
+    fi
+  done
+
+  [[ "$PWD" == $HOME/src/github.com/monzo/* ]] && return
+  
   ls
 }
