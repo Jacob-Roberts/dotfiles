@@ -8,8 +8,6 @@ alias emulator='openemulator'
 
 # Monzo Setup
 export GOPATH=$HOME
-export GOROOT="/opt/homebrew/opt/go/libexec"
-export PATH="/opt/homebrew/opt/go/bin:$PATH"
 
 [ -f ${GOPATH}/src/github.com/monzo/starter-pack/zshrc ] && source $GOPATH/src/github.com/monzo/starter-pack/zshrc
 

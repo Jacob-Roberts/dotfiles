@@ -251,5 +251,6 @@
   "redoclyOpenAPI.user.anonymousId": "anon_01KBYMGQ5FS6PNYFSHZT1SZGNN",
   "editor.renderWhitespace": "all",
   "git.replaceTagsWhenPull": true,
-  "terminal.external.osxExec": "Ghostty.app"
+  "terminal.external.osxExec": "Ghostty.app",
+  "update.mode": "manual"
 }
