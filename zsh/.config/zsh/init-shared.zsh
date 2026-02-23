@@ -55,5 +55,3 @@ if command -v nvim &> /dev/null; then
 elif command -v vim &> /dev/null; then
   export EDITOR='vim'
 fi
-
-export PATH="$HOME/bin:$PATH"

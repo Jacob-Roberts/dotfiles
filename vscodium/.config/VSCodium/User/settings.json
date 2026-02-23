@@ -158,7 +158,9 @@
     "partial-utility-type",
     "keyof",
     "typeof",
-    "omit-utility-type"
+    "omit-utility-type",
+    "type-predicate",
+    "exclude-utility-type"
   ],
   "go.toolsManagement.autoUpdate": true,
   "redhat.telemetry.enabled": false,
