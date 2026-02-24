@@ -1,3 +1,5 @@
+# See https://git-scm.com/docs/git-config
+
 [user]
 	name = Jacob Roberts
 	email = jroberts.g1ql8@simplelogin.com
@@ -18,13 +20,29 @@
     path = config-school
 
 [color]
-	ui = true
+    ui = true
 
 [pull]
-  rebase = true
+    rebase = true                    # Rebase (instead of merge) on pull
 
 [push]
-  autoSetupRemote = true
+    autoSetupRemote = true
+
+[diff]
+	algorithm = histogram      # Clearer diffs on moved/edited lines
+	colorMoved = plain 	   # Highlight moved blocks in diffs
+	mnemonicPrefix = true	   # More intuitive refs in diff output
+
+[commit]
+	verbose = true			# Include diff comment in commit message template
+
+[column]
+	ui = auto			# Output in columns when possible
+
+[branch]
+	sort = -committerdate 		# Sort branches by most recent commit first
+[tag]
+	sort = -version:refname		# Sort version numbers as you would expect
 
 [rebase]
 	updateRefs = true
@@ -33,6 +51,7 @@
 [core]
 	autocrlf = input
 [rerere]
-	enabled = true
+	enabled = true			# Record and reuse conflict resolutions
+	autoupdate = true		# Apply stored conflict resolutions automatically
 [gpg]
 	format = ssh
