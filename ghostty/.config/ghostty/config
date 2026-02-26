@@ -5,3 +5,4 @@ cursor-click-to-move = 1
 keybind = shift+enter=text:\n
 
 command = zsh
+
