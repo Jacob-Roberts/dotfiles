@@ -1,1 +1,1 @@
-[[ -r "$XDG_CONFIG_HOME/zsh/ssh-agent.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/ssh-agent.zsh"
+[[ -r "$XDG_CONFIG_HOME/zsh/ssh-agent.sh" ]] && source "$XDG_CONFIG_HOME/zsh/ssh-agent.sh"
