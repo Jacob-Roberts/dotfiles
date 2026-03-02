@@ -3,8 +3,8 @@
 rm $HOME/.zshrc
 rm $HOME/.zprofile
 
-stow --no-folding git
-stow --no-folding nvim
-stow --no-folding opencode
-stow --no-folding ssh
-stow --no-folding zsh
+stow -t $HOME --no-folding git
+stow -t $HOME --no-folding nvim
+stow -t $HOME --no-folding opencode
+stow -t $HOME --no-folding ssh
+stow -t $HOME --no-folding zsh
