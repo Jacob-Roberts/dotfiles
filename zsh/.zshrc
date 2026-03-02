@@ -1,8 +1,8 @@
 [[ -r "$XDG_CONFIG_HOME/zsh/shell.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/shell.zsh"
 [[ -r "$XDG_CONFIG_HOME/zsh/key-bindings.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/key-bindings.zsh"
+[[ -r "$XDG_CONFIG_HOME/zsh/secrets.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/secrets.zsh"
 [[ -r "$XDG_CONFIG_HOME/zsh/init-shared.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/init-shared.zsh"
 [[ -r "$XDG_CONFIG_HOME/zsh/aliases.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/aliases.zsh"
-[[ -r "$XDG_CONFIG_HOME/zsh/secrets.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/secrets.zsh"
 
 # Work specific configs
 if [ -r "$XDG_CONFIG_HOME/zsh/monzo.zsh" ] && [ "$USE_MONZO" = true ]; then
