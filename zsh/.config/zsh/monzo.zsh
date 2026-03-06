@@ -9,7 +9,7 @@ alias emulator='openemulator'
 # Monzo Setup
 export GOPATH=$HOME
 
-[ -f ${GOPATH}/src/github.com/monzo/starter-pack/zshrc ] && source $GOPATH/src/github.com/monzo/starter-pack/zshrc
+[ -f ${GOPATH}/src/github.com/monzo/starter-pack/zshrc ] && source ${GOPATH}/src/github.com/monzo/starter-pack/zshrc
 
 # Android Studio setup
 export JAVA_HOME=$(/usr/libexec/java_home -v 21)
