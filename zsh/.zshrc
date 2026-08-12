@@ -1,13 +1,13 @@
 [[ -r "$XDG_CONFIG_HOME/zsh/shell.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/shell.zsh"
 [[ -r "$XDG_CONFIG_HOME/zsh/key-bindings.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/key-bindings.zsh"
 [[ -r "$XDG_CONFIG_HOME/zsh/secrets.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/secrets.zsh"
-[[ -r "$XDG_CONFIG_HOME/zsh/init-shared.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/init-shared.zsh"
-[[ -r "$XDG_CONFIG_HOME/zsh/aliases.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/aliases.zsh"
-
 # Work specific configs
 if [ -r "$XDG_CONFIG_HOME/zsh/monzo.zsh" ] && [ "$USE_MONZO" = true ]; then
     source $XDG_CONFIG_HOME/zsh/monzo.zsh
 fi
+[[ -r "$XDG_CONFIG_HOME/zsh/init-shared.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/init-shared.zsh"
+[[ -r "$XDG_CONFIG_HOME/zsh/aliases.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/aliases.zsh"
+
 
 # Appease Monzo ios autosetup scripts. This is included in $XDG_CONFIG_HOME/zsh/monzo
 # eval "$(rbenv init -)"

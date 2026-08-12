@@ -17,6 +17,8 @@ case ":$PATH:" in
   *":$BUN_INSTALL/bin:"*) ;;
   *) export PATH="$BUN_INSTALL/bin:$PATH" ;;
 esac
+# bun completions
+[ -s "/Users/jacobroberts/.bun/_bun" ] && source "/Users/jacobroberts/.bun/_bun"
 # bun end
 
 # The next line updates PATH for the Google Cloud SDK.
