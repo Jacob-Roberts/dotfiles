@@ -95,10 +95,11 @@
     "-rpc.trace",
     "--debug=localhost:6060"
   ],
-  "go.alternateTools": {
-     "gopls": "monzo-gopls"
-  },
+  // "go.alternateTools": {
+  //    "gopls": "monzo-gopls"
+  // },
   "gopls": {
+
     "build.directoryFilters": [
         "-vendor",
         "-manifests",
