@@ -7,12 +7,52 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "cli_default_open_behavior": "existing_window",
+  "edit_predictions": {
+    "provider": "ollama"
+  },
+  "project_panel": {
+    "dock": "left",
+    "auto_reveal_entries": true,
+    "folder_icons": true,
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "agent": {
+    "dock": "right",
+    "default_profile": "ask",
+    "enabled": true,
+    "button": true,
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5",
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "git_panel": {
+    "tree_view": true,
+    "dock": "left",
+  },
+  // I would highly recommend this being turned off as it's not optimised
+  // for monorepos and causes high CPU usage (gopls is already bad enough)
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
   "base_keymap": "VSCode",
   "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 16,
+  "vim_mode": true,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "One Light",
-    "dark": "One Dark",
+    "dark": "Ayu Dark",
   },
 }
