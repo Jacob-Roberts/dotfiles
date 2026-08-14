@@ -10,6 +10,7 @@ alias gpm='git fetch origin master:master'
 alias python='python3'
 alias lcs='echo $?'
 alias fnmsetup='eval "$(fnm env --use-on-cd)"'
+alias rdd='killall Xcode; sleep 1 && rm -rf ~/Library/Developer/Xcode/DerivedData && echo "Removed Xcode derived data"'
 
 alias d='docker'
 alias k='kubectl'
