@@ -27,3 +27,11 @@ require("default.hypr.toggles")
 
 -- Add any other personal Hyprland configuration below.
 -- o.window("qemu", { workspace = "5" })
+o.window("(([cC]hrome|[bB]rave|Vivaldi-stable|helium)-nngceckbapebfimnlniiiahkandclblb-Default)|([mM]sedge-_jbkfoedolllekgbhcbcoahefnbanhhlh-Default)", {
+  no_screen_share = true,
+  float = true,
+  no_blur = true,
+  max_size = "480 650",
+})
+
+o.window("((google-)?[cC]hrom(e|ium)|[bB]rave(-browser)?|[mM]icrosoft-edge|Vivaldi-stable|helium)", { tag = "+chromium-based-browser" })
