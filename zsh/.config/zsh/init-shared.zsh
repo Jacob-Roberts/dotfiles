@@ -7,6 +7,8 @@ if [ Linux = `uname` ]; then
   source "$XDG_CONFIG_HOME/zsh/init-linux.zsh"
 fi
 
+[ ! -d $HOME/.local/bin ] && export PATH="$PATH:$HOME/.local/bin"
+
 # Load zinit for plugin management
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"

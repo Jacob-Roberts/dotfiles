@@ -7,14 +7,33 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "VSCode Icons for Zed (Dark)",
+  "ssh_connections": [
+    {
+      "host": "pbj-workstation-2",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/jakeroberts"
+          ]
+        },
+        {
+          "paths": [
+            "/home/jakeroberts/developer/personal/homelab/./"
+          ]
+        }
+      ]
+    }
+  ],
   "cli_default_open_behavior": "existing_window",
   "edit_predictions": {
     "provider": "ollama"
   },
   "project_panel": {
+    "folder_indicator": "icon",
     "dock": "left",
     "auto_reveal_entries": true,
-    "folder_icons": true,
   },
   "outline_panel": {
     "dock": "left",
