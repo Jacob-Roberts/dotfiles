@@ -32,6 +32,7 @@ stashed    = ""
 staged     = ""
 renamed    = ""
 deleted    = ""
+disabled   = true
 
 [os]
 disabled = false
