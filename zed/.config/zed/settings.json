@@ -20,6 +20,11 @@
         },
         {
           "paths": [
+            "/home/jakeroberts/developer/personal/celiabangs"
+          ]
+        },
+        {
+          "paths": [
             "/home/jakeroberts/developer/personal/homelab/./"
           ]
         }
