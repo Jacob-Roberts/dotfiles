@@ -8,6 +8,8 @@
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
 
+[includeIf "gitdir:~/.dotfiles/"]
+    path = config-dotfiles
 [includeIf "gitdir:~/src/github.com/monzo/"]
     path = config-monzo
 [includeIf "gitdir:~/developer/boxworks/"]

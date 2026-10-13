@@ -1,0 +1,9 @@
+# Public repo: always use HTTPS so new machines can pull without SSH/deploy keys.
+# Longest insteadOf match wins, so this overrides the global ssh rewrite.
+[url "https://github.com/jacob-roberts/dotfiles"]
+	insteadOf = https://github.com/jacob-roberts/dotfiles
+
+# Pushing over HTTPS authenticates via gh (only needed for push, not pull)
+[credential "https://github.com"]
+	helper =
+	helper = !gh auth git-credential
