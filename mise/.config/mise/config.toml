@@ -9,3 +9,9 @@ node = "latest"
 opencode = { version = "latest", allow_builds = ["@opencode/cli"] }
 starship = "latest"
 zoxide = "latest"
+
+[bootstrap.packages]
+"brew:dockutil" = "latest"
+"brew:stow" = "latest"
+"brew-cask:bruno" = "latest"
+"brew-case:zed" = "latest"
