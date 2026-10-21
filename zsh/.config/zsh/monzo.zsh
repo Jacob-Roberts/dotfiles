@@ -24,8 +24,8 @@ export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 # Created by `pipx` on 2024-06-02 21:39:55
 export PATH="$PATH:$HOME/.local/bin"
 
-alias tg='mise x -- tuist generate'
-alias ti='mise x -- tuist install'
+alias tg='tuist generate'
+alias ti='tuist install'
 alias ss="gh pr list -A "@me" -s all | fzf | awk '{print $1}' | xargs shipper deploy --s101"
 alias sp="gh pr list -A "@me" -s all | fzf | awk '{print $1}' | xargs shipper deploy --prod"
 alias lintwearedev="$GOPATH/bin/lint"
