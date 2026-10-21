@@ -3,6 +3,7 @@
 # if stow is installed, use it to install the dotfiles
 if command -v stow >/dev/null 2>&1; then
     #stow --no-folding ghostty
+    stow --no-folding mise
     stow --no-folding git
     stow --no-folding nvim
     stow --no-folding opencode
