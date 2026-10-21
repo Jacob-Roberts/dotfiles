@@ -1,0 +1,11 @@
+[tools]
+bat = "latest"
+eza = "latest"
+fd = "latest"
+fzf = "latest"
+jq = "latest"
+neovim = "latest"
+node = "latest"
+opencode = { version = "latest", allow_builds = ["@opencode/cli"] }
+starship = "latest"
+zoxide = "latest"

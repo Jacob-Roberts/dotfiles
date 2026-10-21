@@ -25,6 +25,11 @@
         },
         {
           "paths": [
+            "/home/jakeroberts/developer/personal/homelab"
+          ]
+        },
+        {
+          "paths": [
             "/home/jakeroberts/developer/personal/homelab/./"
           ]
         }
