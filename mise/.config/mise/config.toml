@@ -1,3 +1,5 @@
+#:schema https://mise.jdx.dev/schema/mise.json
+
 [tools]
 bat = "latest"
 eza = "latest"
@@ -10,8 +12,32 @@ opencode = { version = "latest", allow_builds = ["@opencode/cli"] }
 starship = "latest"
 zoxide = "latest"
 
+[bootstrap.macos.dock]
+autohide = false
+orientation = "bottom"
+
+[bootstrap.macos.finder]
+show_all_files = true
+show_pathbar = true
+preferred_view_style = "column"
+
+[bootstrap.macos.trackpad]
+tap_to_click = false
+
 [bootstrap.packages]
 "brew:dockutil" = "latest"
 "brew:stow" = "latest"
 "brew-cask:bruno" = "latest"
-"brew-case:zed" = "latest"
+"brew-cask:zed" = "latest"
+"brew-cask:brave-browser" = "latest"
+"brew-cask:ghostty" = "latest"
+"brew-cask:localsend" = "latest"
+"brew-cask:maccy" = "latest"
+"brew-cask:monitorcontrol" = "latest"
+# "brew-cask:netbirdio/tap/netbird-ui" = "latest"
+"brew-cask:orbstack" = "latest"
+# "brew-cask:raspberry-pi-imager" = "latest"
+"brew-cask:rectangle" = "latest"
+"brew-cask:rustdesk" = "latest"
+"brew-cask:scroll-reverser" = "latest"
+"brew-cask:signal" = "latest"
