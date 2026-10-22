@@ -34,6 +34,7 @@ tap_to_click = false
 "brew-cask:localsend" = "latest"
 "brew-cask:maccy" = "latest"
 "brew-cask:monitorcontrol" = "latest"
+"brew-cask:joplin" = "latest"
 # "brew-cask:netbirdio/tap/netbird-ui" = "latest"
 "brew-cask:orbstack" = "latest"
 # "brew-cask:raspberry-pi-imager" = "latest"
