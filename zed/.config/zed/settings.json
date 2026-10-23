@@ -20,6 +20,11 @@
         },
         {
           "paths": [
+            "/home/jakeroberts/developer/opensource/starship"
+          ]
+        },
+        {
+          "paths": [
             "/home/jakeroberts/developer/personal/celiabangs"
           ]
         },
