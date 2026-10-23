@@ -9,6 +9,7 @@ jq = "latest"
 neovim = "latest"
 node = "latest"
 opencode = { version = "latest", allow_builds = ["@opencode/cli"] }
+ripgrep = "latest"
 starship = "latest"
 zoxide = "latest"
 
