@@ -1,7 +1,7 @@
 # Homebrew loads from different places on x86 and arm
-if [ arm64 = `uname -m` ]; then
+if [ arm64 = `uname -m` ] && [ -x /opt/homebrew/bin/brew ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
-else
+elif [ -x /usr/local/bin/brew ]; then
   eval "$(/usr/local/bin/brew shellenv)"
 fi
 
