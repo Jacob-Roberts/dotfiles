@@ -5,3 +5,6 @@ system/.custom
 system/.exports
 zsh/.config/secrets
 zed/.config/zed/prompts/prompts-library-db.0.mdb
+
+# Machine-specific git config (ssh rewrite etc)
+git/.config/git/config-ssh-local

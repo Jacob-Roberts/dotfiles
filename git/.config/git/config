@@ -62,3 +62,6 @@
 	autoupdate = true		# Apply stored conflict resolutions automatically
 [gpg]
 	format = ssh
+
+[include]
+	path = config-ssh-local
