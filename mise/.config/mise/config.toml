@@ -3,5 +3,6 @@
 [tools]
 bat = "latest"
 eza = "latest"
+fzf = "latest"
 starship = "latest"
 zoxide = "latest"
