@@ -5,24 +5,12 @@
 	email = jroberts.g1ql8@simplelogin.com
 	signingkey = ~/.ssh/id_ed25519.pub
 
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
-[url "https://github.com/zdharma-continuum/zinit"]
-	insteadOf = https://github.com/zdharma-continuum/zinit
-[url "ssh://git@github.com/zdharma-continuum/zinit"]
-	pushInsteadOf = https://github.com/zdharma-continuum/zinit
-
-
 [includeIf "gitdir:~/.dotfiles/"]
     path = config-dotfiles
 [includeIf "gitdir:~/src/github.com/monzo/"]
     path = config-monzo
 [includeIf "gitdir:~/developer/boxworks/"]
     path = config-boxworks
-[includeIf "gitdir:~/developer/boxworks/"]
-    path = config-boxworks
-[includeIf "gitdir:~/developer/school/"]
-    path = config-school
 [includeIf "gitdir:~/developer/school/"]
     path = config-school
 
