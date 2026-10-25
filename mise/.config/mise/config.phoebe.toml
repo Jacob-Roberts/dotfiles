@@ -1,0 +1,19 @@
+#:schema https://mise.jdx.dev/schema/mise.json
+
+[tools]
+jq = "latest"
+
+[bootstrap.macos.dock]
+autohide = false
+orientation = "bottom"
+
+[bootstrap.macos.finder]
+show_all_files = true
+show_pathbar = true
+preferred_view_style = "column"
+
+[bootstrap.macos.trackpad]
+tap_to_click = false
+
+[bootstrap.packages]
+"brew:stow" = "latest"
