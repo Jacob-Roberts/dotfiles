@@ -1,0 +1,14 @@
+#:schema https://mise.jdx.dev/schema/mise.json
+
+[tools]
+fd = "latest"
+gh = "latest"
+jq = "latest"
+ripgrep = "latest"
+neovim = "latest"
+node = "latest"
+opencode = { version = "latest", allow_builds = ["@opencode/cli"] }
+
+[bootstrap.packages]
+"brew-cask:bruno" = "latest"
+"brew-cask:orbstack" = "latest"
