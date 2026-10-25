@@ -2,6 +2,7 @@
 
 [tools]
 fd = "latest"
+gh = "latest"
 jq = "latest"
 ripgrep = "latest"
 neovim = "latest"
