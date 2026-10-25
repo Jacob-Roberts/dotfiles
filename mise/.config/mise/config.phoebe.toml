@@ -2,7 +2,4 @@
 
 [bootstrap.packages]
 "brew-cask:brave-browser@beta" = "latest"
-"brew-cask:rectangle" = "latest"
-"brew-cask:scroll-reverser" = "latest"
-"brew-cask:signal" = "latest"
 "brew-cask:signal@beta" = "latest"
