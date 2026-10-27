@@ -6,7 +6,6 @@
 "brew-cask:discord" = "latest"
 "brew-cask:localsend" = "latest"
 # "brew-cask:netbirdio/tap/netbird-ui" = "latest"
-"brew-cask:rectangle" = "latest"
 "brew-cask:rustdesk" = "latest"
 "brew-cask:signal" = "latest"
 "brew-cask:signal@beta" = "latest"

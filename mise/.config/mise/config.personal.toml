@@ -7,7 +7,6 @@
 # "brew-cask:netbirdio/tap/netbird-ui" = "latest"
 "brew-cask:orbstack" = "latest"
 # "brew-cask:raspberry-pi-imager" = "latest"
-"brew-cask:rectangle" = "latest"
 "brew-cask:rustdesk" = "latest"
 "brew-cask:signal" = "latest"
 "brew-cask:zoom" = "latest"

@@ -19,4 +19,5 @@ tap_to_click = false
 "brew-cask:maccy" = "latest"
 "brew-cask:monitorcontrol" = "latest"
 "brew-cask:joplin" = "latest"
+"brew-cask:rectangle" = "latest"
 "brew-cask:scroll-reverser" = "latest"
