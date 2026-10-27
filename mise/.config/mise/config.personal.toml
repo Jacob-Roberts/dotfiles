@@ -5,6 +5,7 @@
 "brew-cask:discord" = "latest"
 "brew-cask:localsend" = "latest"
 # "brew-cask:netbirdio/tap/netbird-ui" = "latest"
+"brew-cask:orbstack" = "latest"
 # "brew-cask:raspberry-pi-imager" = "latest"
 "brew-cask:rectangle" = "latest"
 "brew-cask:rustdesk" = "latest"

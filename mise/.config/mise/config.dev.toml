@@ -11,4 +11,3 @@ opencode = { version = "latest", allow_builds = ["@opencode/cli"] }
 
 [bootstrap.packages]
 "brew-cask:bruno" = "latest"
-"brew-cask:orbstack" = "latest"
