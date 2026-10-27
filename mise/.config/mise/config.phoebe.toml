@@ -1,5 +1,13 @@
 #:schema https://mise.jdx.dev/schema/mise.json
 
 [bootstrap.packages]
+"brew-cask:brave-browser" = "latest"
 "brew-cask:brave-browser@beta" = "latest"
+"brew-cask:discord" = "latest"
+"brew-cask:localsend" = "latest"
+# "brew-cask:netbirdio/tap/netbird-ui" = "latest"
+"brew-cask:rectangle" = "latest"
+"brew-cask:rustdesk" = "latest"
+"brew-cask:signal" = "latest"
 "brew-cask:signal@beta" = "latest"
+"brew-cask:zoom" = "latest"

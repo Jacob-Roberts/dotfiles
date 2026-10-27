@@ -1,1 +1,3 @@
-env = ["workstation", "phoebe"]
+env = ["mac", "phoebe"]
+# env = ["mac", "dev", "personal"]
+# env = ["mac", "dev", "work"]
