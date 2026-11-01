@@ -13,11 +13,11 @@ preferred_view_style = "column"
 tap_to_click = false
 
 [bootstrap.packages]
-"brew:stow" = "latest"
-"brew-cask:zed" = "latest"
-"brew-cask:ghostty" = "latest"
-"brew-cask:maccy" = "latest"
-"brew-cask:monitorcontrol" = "latest"
-"brew-cask:joplin" = "latest"
-"brew-cask:rectangle" = "latest"
-"brew-cask:scroll-reverser" = "latest"
+"brew:stow" = { version = "latest", os = ["macos"] }
+"brew-cask:zed" = { version = "latest", os = ["macos"] }
+"brew-cask:ghostty" = { version = "latest", os = ["macos"] }
+"brew-cask:maccy" = { version = "latest", os = ["macos"] }
+"brew-cask:monitorcontrol" = { version = "latest", os = ["macos"] }
+"brew-cask:joplin" = { version = "latest", os = ["macos"] }
+"brew-cask:rectangle" = { version = "latest", os = ["macos"] }
+"brew-cask:scroll-reverser" = { version = "latest", os = ["macos"] }

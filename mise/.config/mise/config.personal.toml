@@ -1,12 +1,16 @@
 #:schema https://mise.jdx.dev/schema/mise.json
 
+[tools]
+flux2 = "latest"
+kubectl = "latest"
+
 [bootstrap.packages]
-"brew-cask:brave-browser" = "latest"
-"brew-cask:discord" = "latest"
-"brew-cask:localsend" = "latest"
-# "brew-cask:netbirdio/tap/netbird-ui" = "latest"
-"brew-cask:orbstack" = "latest"
-# "brew-cask:raspberry-pi-imager" = "latest"
-"brew-cask:rustdesk" = "latest"
-"brew-cask:signal" = "latest"
-"brew-cask:zoom" = "latest"
+"brew-cask:brave-browser" = { version = "latest", os = ["macos"] }
+"brew-cask:discord" = { version = "latest", os = ["macos"] }
+"brew-cask:localsend" = { version = "latest", os = ["macos"] }
+# "brew-cask:netbirdio/tap/netbird-ui" = { version = "latest", os = ["macos"] }
+"brew-cask:orbstack" = { version = "latest", os = ["macos"] }
+# "brew-cask:raspberry-pi-imager" = { version = "latest", os = ["macos"] }
+"brew-cask:rustdesk" = { version = "latest", os = ["macos"] }
+"brew-cask:signal" = { version = "latest", os = ["macos"] }
+"brew-cask:zoom" = { version = "latest", os = ["macos"] }
