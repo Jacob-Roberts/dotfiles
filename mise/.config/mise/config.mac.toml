@@ -21,3 +21,4 @@ tap_to_click = false
 "brew-cask:joplin" = { version = "latest", os = ["macos"] }
 "brew-cask:rectangle" = { version = "latest", os = ["macos"] }
 "brew-cask:scroll-reverser" = { version = "latest", os = ["macos"] }
+"brew-cask:font-jetbrains-mono-nerd-font" = "latest"
