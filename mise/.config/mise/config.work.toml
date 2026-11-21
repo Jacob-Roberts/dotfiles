@@ -1,7 +1,9 @@
 #:schema https://mise.jdx.dev/schema/mise.json
 
 [tools]
-
+colima = "latest"
+oci = "latest"
+uv = "latest"
 
 [bootstrap.packages]
 "brew-cask:postman" = "latest"

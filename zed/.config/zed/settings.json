@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "$schema": "zed://schemas/settings",
   "icon_theme": "VSCode Icons for Zed (Dark)",
   "ssh_connections": [
     {
@@ -14,36 +15,26 @@
       "args": [],
       "projects": [
         {
-          "paths": [
-            "/home/jakeroberts"
-          ]
+          "paths": ["/home/jakeroberts"],
         },
         {
-          "paths": [
-            "/home/jakeroberts/developer/opensource/starship"
-          ]
+          "paths": ["/home/jakeroberts/developer/opensource/starship"],
         },
         {
-          "paths": [
-            "/home/jakeroberts/developer/personal/celiabangs"
-          ]
+          "paths": ["/home/jakeroberts/developer/personal/celiabangs"],
         },
         {
-          "paths": [
-            "/home/jakeroberts/developer/personal/homelab"
-          ]
+          "paths": ["/home/jakeroberts/developer/personal/homelab"],
         },
         {
-          "paths": [
-            "/home/jakeroberts/developer/personal/marymalcarne-com"
-          ]
-        }
-      ]
-    }
+          "paths": ["/home/jakeroberts/developer/personal/marymalcarne-com"],
+        },
+      ],
+    },
   ],
   "cli_default_open_behavior": "existing_window",
   "edit_predictions": {
-    "provider": "ollama"
+    "provider": "ollama",
   },
   "project_panel": {
     "folder_indicator": "icon",
@@ -88,5 +79,11 @@
     "mode": "dark",
     "light": "One Light",
     "dark": "Ayu Dark",
+  },
+  "languages": {
+    "Rust": {
+      "format_on_save": "on",
+      "formatter": "language_server",
+    },
   },
 }

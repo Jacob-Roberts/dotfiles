@@ -10,6 +10,8 @@ node = "latest"
 claude = "latest"
 codex = "latest"
 opencode = { version = "latest", allow_builds = ["@opencode/cli"] }
+helm = "latest"
+k9s = "latest"
 
 [bootstrap.packages]
 "brew-cask:bruno" = { version = "latest", os = ["macos"] }
