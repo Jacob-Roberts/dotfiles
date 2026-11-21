@@ -73,3 +73,6 @@ $RECYCLE.BIN/
 *.lnk
 
 **/.claude/settings.local.json
+
+# Mise
+mise.local.toml
