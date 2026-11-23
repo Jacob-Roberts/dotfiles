@@ -7,3 +7,4 @@ uv = "latest"
 
 [bootstrap.packages]
 "brew-cask:postman" = "latest"
+"brew-cask:visual-studio-code" = "latest"

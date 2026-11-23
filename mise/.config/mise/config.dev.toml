@@ -1,6 +1,7 @@
 #:schema https://mise.jdx.dev/schema/mise.json
 
 [tools]
+docker-cli = "latest"
 fd = "latest"
 gh = "latest"
 jq = "latest"

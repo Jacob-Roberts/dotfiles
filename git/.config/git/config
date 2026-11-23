@@ -13,6 +13,10 @@
     path = config-boxworks
 [includeIf "gitdir:~/developer/school/"]
     path = config-school
+[includeIf "gitdir:~/developer/oracle/"]
+    path = config-oracle
+[url "ssh://git@bitbucket.oci.oraclecorp.com:7999/"]
+	insteadof = bb:/
 
 [color]
     ui = true
