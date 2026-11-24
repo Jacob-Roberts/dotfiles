@@ -2,9 +2,13 @@
 
 [tools]
 colima = "latest"
+cliamp = "latest"
 oci = "latest"
 uv = "latest"
 
 [bootstrap.packages]
 "brew-cask:postman" = "latest"
 "brew-cask:visual-studio-code" = "latest"
+
+[bootstrap.brew.taps]
+"acep/brew" = "ssh://oci.private.devops.scmservice.us-phoenix-1.oci.oracleiaas.com/namespaces/axuxirvibvvo/projects/ACEP/repositories/brew"

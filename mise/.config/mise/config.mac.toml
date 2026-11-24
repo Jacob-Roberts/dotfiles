@@ -3,14 +3,26 @@
 [bootstrap.macos.dock]
 autohide = false
 orientation = "bottom"
+apps = [
+    "/System/Applications/Apps.app",
+    "/Applications/Google Chrome.app",
+    "/Applications/Ghostty.app",
+    "/Applications/Zed.app",
+    "/Applications/T3 Code (Beta).app",
+    "/Applications/Joplin.app",
+]
 
 [bootstrap.macos.finder]
 show_all_files = true
 show_pathbar = true
 preferred_view_style = "column"
+save_new_documents_to_cloud = false
 
 [bootstrap.macos.trackpad]
 tap_to_click = false
+
+[bootstrap.settings.macos.defaults."com.apple.dock"]
+"wvous-br-corner" = 0
 
 [bootstrap.packages]
 "brew:stow" = { version = "latest", os = ["macos"] }
