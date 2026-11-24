@@ -31,6 +31,16 @@
         },
       ],
     },
+    {
+      "host": "192.168.42.21",
+      "username": "jakeroberts",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/jakeroberts/developer/personal/homelab/./"],
+        },
+      ],
+    },
   ],
   "cli_default_open_behavior": "existing_window",
   "edit_predictions": {
